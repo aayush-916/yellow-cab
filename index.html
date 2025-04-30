@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Car Rental - Hrithvik Travels</title>
+  <style>
+    :root {
+      --primary-color: #fcd900;
+      --dark-overlay: rgba(0, 0, 0, 0.5);
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 2rem;
+      background-color: var(--primary-color);
+    }
+
+    header img {
+      height: 73px;
+    }
+
+    header .contact {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .hero {
+      position: relative;
+      height: 126vh;
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/nepal.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(50%);
+      z-index: -1;
+    }
+
+    .hero-text {
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+      margin-top: 2rem;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .booking-form {
+      max-width: 500px;
+      margin: -100px auto 3rem;
+      background-color: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: slideUp 1s ease-in-out;
+      position: relative;
+      bottom: 32rem;
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid var(--primary-color);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #e6b800;
+    }
+
+    .booking-form button {
+      width: 100%;
+      background-color: var(--primary-color);
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: #e6b800;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .booking-form {
+        margin: -80px 1rem 2rem;
+        padding: 1.5rem;
+      }
+    }
+
+
+    .services-section {
+    padding: 4rem 2rem;
+    background-color: #fffbe6;
+    text-align: center;
+    position: relative;
+    bottom: 31rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+  }
+
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+
+  .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #f3f3f3;
+  }
+
+  .service-card h3 {
+    color: #222;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 2rem 1rem;
+    }
+    .service-card img {
+      height: 150px;
+    }
+  }
+
+
+  
+.fixed-bottom-right2 {
+    position: fixed;
+    bottom: 4.8rem;
+    right: 0.2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 20;
+  }
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 1.8rem;
+    right: 0.8rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  .whatsapp-button {
+  
+
+    border-radius: 50%;
+
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .whatsapp-icon {
+    width: 2.5rem; 
+    height: 2.5rem;
+  }
+  .whatsapp-icon1 {
+    width: 3.5rem; 
+    height: 3.5rem;
+  }
+  
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 1.5rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    top: 133rem;
+    width: 100vw;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-about,
+  .footer-contact,
+  .footer-links {
+    flex: 1 1 250px;
+  }
+
+  .footer h3, .footer h4 {
+    color: var(--primary-color, #fcd900);
+    margin-bottom: 1rem;
+  }
+
+  .footer p, .footer a {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .footer a:hover {
+    color: var(--primary-color, #fcd900);
+    text-decoration: underline;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 900px) {
+    .footer{
+        position: absolute;
+        top: 133rem;
+    }
+  }
+
+  @media (max-width: px) {
+    .footer{
+        position: absolute;
+        top: 133rem;
+    }
+  }
+  @media (max-width: 578px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-about, .footer-contact, .footer-links {
+      text-align: center;
+    }
+    .footer{
+        position: absolute;
+        top: 194rem;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/logo1.png" alt="Logo" />
+    <div class="contact">📞 9263220075</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Your Journey Starts With Us</h1>
+      <p>Book your taxi or travel package with yellow cab</p>
+    </div>
+  </section>
+
+  <section class="booking-form">
+    <h2>Book Your Ride</h2>
+    <form action="https://formsubmit.co/yellowcabpatna@gmail.com" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="pickup">Pickup Location</label>
+        <input type="text" id="pickup" name="pickup" required />
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" name="destination" required />
+      </div>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Services Section HTML -->
+<section class="services-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src="/sr1.jpg" alt="Car Rental">
+        <h3>Car Rental Service</h3>
+        <p>Affordable car rentals for local and outstation travel with professional drivers.</p>
+      </div>
+      <div class="service-card">
+        <img src="/sr2.jpg" alt="Airport Taxi">
+        <h3>Airport Taxi</h3>
+        <p>On-time airport pickup and drop services with comfortable rides.</p>
+      </div>
+      <div class="service-card">
+        <img src="/sr3.jpg" alt="Railway Station Pickup">
+        <h3>Railway Station Pickup/Drop</h3>
+        <p>Reliable taxi services for railway station transfers with hassle-free experience.</p>
+      </div>
+      <div class="service-card">
+        <img src="/sr4.jpg" alt="Wedding Car">
+        <h3>Wedding Car Rental</h3>
+        <p>Decorated luxury cars for wedding ceremonies to make your special day grand.</p>
+      </div>
+      <div class="service-card">
+        <img src="/sr5.jpg" alt="Tour Packages">
+        <h3>Tour Packages</h3>
+        <p>Exciting tour packages across Bihar and India with budget-friendly pricing.</p>
+      </div>
+      <div class="service-card">
+        <img src="/sr6.jpg" alt="Corporate Booking">
+        <h3>Corporate Booking</h3>
+        <p>Custom taxi solutions for corporate events, meetings, and staff transport.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="fixed-bottom-right2">
+    <a
+      href="tel:+919263220075"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-button"
+    >
+      <img src="/call_logo.webp" alt="WhatsApp" class="whatsapp-icon1" />
+    </a>
+  </div>
+  <div class="fixed-bottom-right">
+    <a
+      href="https://wa.me/+919263220075"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-button"
+    >
+      <img src="/whatsapp-icon.webp" alt="WhatsApp" class="whatsapp-icon" />
+    </a>
+  </div>
+
+
+  <!-- Footer Section HTML -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Yellow Cab</h3>
+        <p>Your trusted partner for travel and car rental services. Comfortable rides, affordable prices, and professional service guaranteed.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Patna, Bihar</p>
+        <p>📞 9263220075</p>
+        <p>✉️ yellowcabpatna@gmail.com</p>
+      </div>
+      
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Yellow Cab. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
