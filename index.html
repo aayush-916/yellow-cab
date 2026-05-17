@@ -355,7 +355,7 @@
           <div class="route-info">
             <h3>Patna → Gaya (Bodh Gaya)</h3>
             <p>~120 km · 2.5 hrs</p>
-            <span class="route-price">Starting ₹2,500</span>
+            <span class="route-price">Starting ₹3,000</span>
           </div>
         </div>
         <div class="route-card fade-up">
@@ -395,7 +395,7 @@
           <div class="route-info">
             <h3>Patna Junction Transfer</h3>
             <p>Railway Station Pickup/Drop</p>
-            <span class="route-price">Starting ₹300</span>
+            <span class="route-price">Starting ₹700</span>
           </div>
         </div>
       </div>
@@ -566,11 +566,13 @@
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('active');
       navbarLinks.classList.toggle('active');
+      document.body.style.overflow = navbarLinks.classList.contains('active') ? 'hidden' : '';
     });
     navbarLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
         navbarLinks.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
 
