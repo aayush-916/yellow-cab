@@ -17,620 +17,965 @@
 
   <title>Yellow Cabs Patna | Cab Service, Taxi Booking & Car Rental</title>
   <meta name="description"
-    content="Yellow Cabs Patna offers reliable cab service, taxi booking, and car rental in Patna. 24/7 airport taxi, local & outstation cabs with professional drivers." />
+    content="Yellow Cabs Patna: local cabs from ₹2000 for 8 hrs / 80 km, outstation round trip from ₹13/km and one-way drops from ₹20/km. Sedan, Ertiga, Scorpio, Innova Crysta. 24/7 booking." />
   <meta name="keywords"
-    content="cab service Patna, taxi service Patna, cab booking Patna, car rental Patna, airport taxi Patna, outstation cab Patna, Yellow Cabs Patna" />
+    content="cab service Patna, taxi service Patna, cab booking Patna, car rental Patna, airport taxi Patna, outstation cab Patna, one way taxi Patna, Innova Crysta on rent Patna, Yellow Cabs Patna" />
 
   <meta property="og:title" content="Yellow Cabs Patna | Trusted Cab & Taxi Service" />
   <meta property="og:description"
-    content="Book comfortable and affordable cab service in Patna. Yellow Cabs provides 24/7 taxi booking, airport transfers, local and outstation travel." />
+    content="Local, outstation round trip and one-way cabs from Patna. Clear per-km fares, driver included, 24/7 booking on call or WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yellowcabs.xyz/" />
   <meta property="og:image" content="https://yellowcabs.xyz/sr1.jpg" />
 
   <link rel="icon" href="logo.jpg" type="image/png" />
-  <meta name="theme-color" content="#F5B800" />
+  <meta name="theme-color" content="#0B1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="navbar-logo" id="navbar-logo">
-        <img src="logo1.png" alt="Yellow Cab Patna Logo" />
+  <!-- ═══ ICONS ═══ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.478l4.572-1.467A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-2.169 0-4.207-.58-5.963-1.585l-.428-.254-2.715.871.865-2.633-.279-.443A9.77 9.77 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z" />
+    </symbol>
+    <symbol id="i-car" viewBox="0 0 64 32">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 23v-6l7-2 8-7h20l10 7 9 2v6" />
+        <path d="M5 23h3M20 23h20M52 23h7" />
+        <circle cx="14" cy="23" r="5" />
+        <circle cx="46" cy="23" r="5" />
+        <path d="M21 15l5-5h13l7 5z" />
+      </g>
+    </symbol>
+    <symbol id="i-suv" viewBox="0 0 64 32">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 24v-9l5-1 5-8h30l8 8 8 2v8" />
+        <path d="M4 24h4M20 24h20M52 24h8" />
+        <circle cx="14" cy="24" r="5" />
+        <circle cx="46" cy="24" r="5" />
+        <path d="M17 14l3-5h10v5zM34 9h9l5 5H34z" />
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+        d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+    </symbol>
+  </svg>
+
+  <!-- ═══ TOP BAR ═══ -->
+  <div class="topbar">Local · Outstation · One Way · Driver included · Open 24 hours</div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <img src="logo1.png" alt="Yellow Cabs Patna logo" />
+        <span><b>Yellow Cabs</b><small>PATNA</small></span>
       </a>
-      <div class="navbar-links" id="navbarLinks">
-        <a href="#home">Home</a>
+      <nav class="nav" id="nav">
+        <a href="#book">Get Rate</a>
+        <a href="#gallery">Our Cars</a>
+        <a href="#fleet">Fleet & Fares</a>
+        <a href="#routes">Routes</a>
         <a href="#services">Services</a>
-        <a href="#fleet">Our Fleet</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+919263220075" class="nav-cta">📞 Book Now</a>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="tel:+919263220075" class="btn btn-amber header-cta">
+        <svg width="16" height="16"><use href="#i-phone" /></svg> Call Now
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ═══ HERO ═══ -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Available 24/7 — Since 2005
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill-badge"><i></i> Mini to Innova Crysta · Driver Included</span>
+          <h1>Cab &amp; Taxi Service in <span class="hl">Patna</span></h1>
+          <p class="hero-sub">Local, outstation round trip and one-way cabs from Patna to anywhere in Bihar and beyond.
+            Clear per-km fares, driver included.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/919263220075?text=Hi%20Yellow%20Cabs%2C%20I%20want%20to%20book%20a%20cab."
+              target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+              <svg width="18" height="18"><use href="#i-wa" /></svg> WhatsApp Now
+            </a>
+            <a href="tel:+919263220075" class="btn btn-ghost">
+              <svg width="16" height="16"><use href="#i-phone" /></svg> Call Now
+            </a>
+          </div>
+          <form class="quick-wa" id="callbackForm">
+            <svg width="18" height="18" class="quick-wa-icon"><use href="#i-wa" /></svg>
+            <input type="tel" name="phone" placeholder="Enter your WhatsApp number" pattern="[0-9+ ]{10,14}"
+              aria-label="Your WhatsApp number" required />
+            <button type="submit" aria-label="Request a call back"><svg width="18" height="18"><use href="#i-arrow" /></svg></button>
+          </form>
+          <p class="quick-wa-msg" id="callbackMsg" aria-live="polite"></p>
+          <span class="chip-offer">🚖 Local from <b>₹2,000</b> · Outstation from <b>₹13/km</b></span>
+          <div class="stats">
+            <div><b>20+</b><span>Years</span></div>
+            <div><b>24 Hrs</b><span>Open</span></div>
+            <div><b>₹13/km</b><span>Outstation</span></div>
+            <div><b>50K+</b><span>Riders</span></div>
+          </div>
         </div>
-        <h1>Your Journey Starts With <span class="highlight">Yellow Cab</span></h1>
-        <p>Book your taxi or travel package with Patna's most trusted cab service. Comfortable rides, professional
-          drivers, and affordable prices — every single trip.</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <h3>20+</h3>
-            <p>Years of Service</p>
+
+        <div class="form-card" id="book">
+          <h2>Get Your Rate in 2 Minutes</h2>
+          <p class="form-sub">Tell us the trip · we reply on WhatsApp with the fare</p>
+          <form action="https://formsubmit.co/yellowcabpatna@gmail.com" method="POST" id="bookingForm">
+            <input type="hidden" name="_subject" value="New cab enquiry - Yellow Cabs website" />
+
+            <div class="trip-tabs" role="radiogroup" aria-label="Trip type">
+              <label><input type="radio" name="trip" value="Local" checked /><span>Local</span></label>
+              <label><input type="radio" name="trip" value="Round Trip" /><span>Round Trip</span></label>
+              <label><input type="radio" name="trip" value="One Way" /><span>One Way</span></label>
+            </div>
+
+            <div class="grid2">
+              <div class="field">
+                <label for="pickup">Pickup</label>
+                <div class="ac-wrap">
+                  <input type="text" id="pickup" name="pickup" value="Patna" placeholder="Pickup city" autocomplete="off" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="destination">Drop</label>
+                <div class="ac-wrap">
+                  <input type="text" id="destination" name="destination" placeholder="Drop city" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field">
+                <label for="date">Journey Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="field" id="returnGroup">
+                <label for="returnDate">Return Date <em>(optional)</em></label>
+                <input type="date" id="returnDate" name="return_date" />
+              </div>
+            </div>
+            <div class="date-chips">
+              <button type="button" data-days="0">Today</button>
+              <button type="button" data-days="1">Tomorrow</button>
+            </div>
+            <div class="field">
+              <label for="car">Car</label>
+              <select id="car" name="car">
+                <option value="Mini" data-local="2000">Mini (Hatchback) · 4 seats</option>
+                <option value="Sedan" data-local="2500" data-round="13" data-oneway="20" selected>Sedan · 4 seats</option>
+                <option value="Ertiga" data-local="3500" data-round="15" data-oneway="26">Ertiga · 6–7 seats</option>
+                <option value="Scorpio" data-local="3500" data-round="17">Scorpio · 7 seats</option>
+                <option value="Innova Crysta" data-local="4500" data-round="22">Innova Crysta · 7 seats</option>
+                <option value="Not sure">Not sure yet, please suggest</option>
+              </select>
+              <p class="fare-hint" id="fareHint" aria-live="polite"></p>
+            </div>
+            <div class="grid2">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="10 digit mobile" pattern="[0-9+ ]{10,14}" required />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-wa btn-block">
+              <svg width="18" height="18"><use href="#i-wa" /></svg> Get Rate on WhatsApp
+            </button>
+            <p class="form-note">No advance needed to get a rate · We answer 24 hours</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GALLERY ═══ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <span class="eyebrow">Our Cars</span>
+        <h2>Inside and outside <span class="hl">our cars</span></h2>
+        <p class="lead">Clean, AC cars with professional drivers. Swipe through the fleet.</p>
+        <div class="carousel" data-carousel>
+          <button class="car-arrow prev" aria-label="Previous photo">‹</button>
+          <div class="car-track">
+            <img src="sr1.jpg" alt="Swift Dzire sedan cab in Patna" loading="lazy" />
+            <img src="sr3.jpg" alt="Innova Crysta on rent in Patna" loading="lazy" />
+            <img src="sr6.jpg" alt="Toyota Fortuner for corporate travel in Patna" loading="lazy" />
+            <img src="sr5.jpg" alt="Innova for outstation trips from Patna" loading="lazy" />
+            <img src="sr4.jpg" alt="Decorated wedding car in Patna" loading="lazy" />
+            <img src="sr2.jpg" alt="Airport transfer cab in Patna" loading="lazy" />
           </div>
-          <div class="stat-item">
-            <h3>50K+</h3>
-            <p>Happy Customers</p>
+          <button class="car-arrow next" aria-label="Next photo">›</button>
+          <div class="car-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PICK BY GROUP SIZE ═══ -->
+    <section class="section section-tight">
+      <div class="container">
+        <span class="eyebrow">Pick Your Car</span>
+        <h2>How many people <span class="hl">are travelling?</span></h2>
+        <p class="lead">Tap your group size and we'll send the rate for the right car.</p>
+        <div class="grid3">
+          <div class="mini-card">
+            <h3>1 to 4 people</h3>
+            <p>Mini or Sedan · AC · Driver Included</p>
+            <a class="btn-pill" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20we%20are%201-4%20people.%20Please%20send%20the%20rate%20for%20a%20Mini%20%2F%20Sedan.">
+              <svg width="14" height="14"><use href="#i-wa" /></svg> Get Rate</a>
           </div>
-          <div class="stat-item">
-            <h3>100+</h3>
-            <p>Cars Available</p>
+          <div class="mini-card">
+            <h3>5 to 7 people</h3>
+            <p>Ertiga or Scorpio · AC · Room for luggage</p>
+            <a class="btn-pill" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20we%20are%205-7%20people.%20Please%20send%20the%20rate%20for%20an%20Ertiga%20%2F%20Scorpio.">
+              <svg width="14" height="14"><use href="#i-wa" /></svg> Get Rate</a>
+          </div>
+          <div class="mini-card">
+            <h3>Premium · 7 people</h3>
+            <p>Innova Crysta · Most comfortable for long trips</p>
+            <a class="btn-pill" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20an%20Innova%20Crysta.">
+              <svg width="14" height="14"><use href="#i-wa" /></svg> Get Rate</a>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-form-card">
-        <h2>Book Your Ride</h2>
-        <p class="form-subtitle">Fill in details and we'll get back to you instantly</p>
-        <form action="https://formsubmit.co/yellowcabpatna@gmail.com" method="POST" id="bookingForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name *</label>
-              <input type="text" id="name" name="name" placeholder="Full name" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="98XXXXXXXX" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="pickup">Pickup Location</label>
-            <input type="text" id="pickup" name="pickup" placeholder="e.g. Patna Junction" />
-          </div>
-          <div class="form-group">
-            <label for="destination">Destination</label>
-            <input type="text" id="destination" name="destination" placeholder="e.g. Jay Prakash Narayan Airport" />
-          </div>
-          <div class="form-group">
-            <label for="date">Pickup Date</label>
-            <input type="date" id="date" name="date" />
-          </div>
-          <button type="submit" class="btn-primary" id="submitBooking">Book Now →</button>
-        </form>
+    <!-- ═══ FLEET & FARES ═══ -->
+    <section class="section" id="fleet">
+      <div class="container">
+        <span class="eyebrow">Fleet &amp; Fares</span>
+        <h2>Our cars. <span class="hl">Clear fares.</span></h2>
+        <p class="lead">Local packages are 8 hours / 80 km. Outstation and one-way are per km. A driver comes with every
+          car, on every trip.</p>
+        <div class="grid3">
+          <article class="fleet-card">
+            <span class="seat-badge">4 Seats</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-car" /></svg></div>
+            <h3>Mini</h3>
+            <p>Hatchback for budget rides around the city.</p>
+            <div class="tags"><span>AC</span><span>Driver Included</span></div>
+            <ul class="rates">
+              <li><span>Local · 8 hrs / 80 km</span><b>₹2,000</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20a%20Mini.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+          <article class="fleet-card">
+            <span class="seat-badge">4 Seats</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-car" /></svg></div>
+            <h3>Sedan</h3>
+            <p>Dzire or similar. For city, airport and outstation trips.</p>
+            <div class="tags"><span>AC</span><span>Driver Included</span></div>
+            <ul class="rates">
+              <li><span>Local · 8 hrs / 80 km</span><b>₹2,500</b></li>
+              <li><span>Outstation round trip</span><b>₹13/km</b></li>
+              <li><span>One way drop</span><b>₹20/km</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20a%20Sedan.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+          <article class="fleet-card">
+            <span class="seat-badge">6–7 Seats</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-suv" /></svg></div>
+            <h3>Ertiga</h3>
+            <p>Room for a family and their luggage.</p>
+            <div class="tags"><span>AC</span><span>Driver Included</span></div>
+            <ul class="rates">
+              <li><span>Local · 8 hrs / 80 km</span><b>₹3,500</b></li>
+              <li><span>Outstation round trip</span><b>₹15/km</b></li>
+              <li><span>One way drop</span><b>₹26/km</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20an%20Ertiga.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+          <article class="fleet-card">
+            <span class="seat-badge">7 Seats</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-suv" /></svg></div>
+            <h3>Scorpio</h3>
+            <p>Strong SUV for long and rough roads.</p>
+            <div class="tags"><span>AC</span><span>Driver Included</span></div>
+            <ul class="rates">
+              <li><span>Local · 8 hrs / 80 km</span><b>₹3,500</b></li>
+              <li><span>Outstation round trip</span><b>₹17/km</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20a%20Scorpio.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+          <article class="fleet-card">
+            <span class="seat-badge">7 Seats</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-suv" /></svg></div>
+            <h3>Innova Crysta</h3>
+            <p>The most comfortable ride for long journeys.</p>
+            <div class="tags"><span>AC</span><span>Premium</span></div>
+            <ul class="rates">
+              <li><span>Local · 8 hrs / 80 km</span><b>₹4,500</b></li>
+              <li><span>Outstation round trip</span><b>₹22/km</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20an%20Innova%20Crysta.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+          <article class="fleet-card">
+            <span class="seat-badge">On Request</span>
+            <div class="fleet-icon"><svg width="80" height="40"><use href="#i-suv" /></svg></div>
+            <h3>Wedding &amp; Luxury</h3>
+            <p>Fortuner and decorated cars for weddings and VIP travel.</p>
+            <div class="tags"><span>Decoration</span><span>Driver Included</span></div>
+            <ul class="rates">
+              <li><span>Rate on request</span><b>Ask us</b></li>
+            </ul>
+            <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20a%20wedding%20%2F%20luxury%20car.">
+              <svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </article>
+        </div>
+        <p class="note-bar">Toll, parking and driver food are extra on all trips. Outstation round trips: minimum 200 km
+          + ₹200 driver charge.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ ROUTE TICKER ═══ -->
-  <div class="ticker-section">
-    <div class="ticker-track">
-      <span>Patna to Ranchi</span><span>Airport Pickup & Drop</span><span>Patna to Varanasi</span><span>Wedding Car
-        Rental</span><span>Patna to Gaya</span><span>Corporate Travel</span><span>Patna to Muzaffarpur</span><span>Tour
-        Packages</span><span>Patna to Rajgir</span><span>Railway Station Transfer</span>
-      <span>Patna to Ranchi</span><span>Airport Pickup & Drop</span><span>Patna to Varanasi</span><span>Wedding Car
-        Rental</span><span>Patna to Gaya</span><span>Corporate Travel</span><span>Patna to Muzaffarpur</span><span>Tour
-        Packages</span><span>Patna to Rajgir</span><span>Railway Station Transfer</span>
-    </div>
-  </div>
-
-  <!-- ═══ SERVICES ═══ -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Our Services</span>
-        <h2>Travel Solutions for Every Need</h2>
-        <p>From airport transfers to wedding car rentals — we've got every ride covered with comfort and reliability.
+    <!-- ═══ ROUTES ═══ -->
+    <section class="section" id="routes">
+      <div class="container">
+        <span class="eyebrow">Routes</span>
+        <h2>Where we go <span class="hl">from Patna</span></h2>
+        <p class="lead">Tap a route to fill in the booking form, or tap the WhatsApp icon to get that rate straight away.
         </p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr1.jpg" alt="Car Rental Service in Patna" loading="lazy" />
-            <span class="service-badge">Popular</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Car Rental Service</h3>
-            <p>Affordable car rentals for local and outstation travel with professional drivers.</p>
-          </div>
+        <div class="filter-pills" role="tablist">
+          <button class="active" data-filter="pilgrim">Temple &amp; Pilgrimage</button>
+          <button data-filter="city">Cities</button>
+          <button data-filter="transfer">Airport &amp; Station</button>
         </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr2.jpg" alt="Airport Taxi Service Patna" loading="lazy" />
-            <span class="service-badge">24/7</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Airport Taxi</h3>
-            <p>On-time airport pickup and drop services with comfortable rides and flight tracking.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr3.jpg" alt="Railway Station Pickup Drop Patna" loading="lazy" />
-            <span class="service-badge">Reliable</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Railway Station Pickup/Drop</h3>
-            <p>Reliable taxi services for railway station transfers with hassle-free experience.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr4.jpg" alt="Wedding Car Rental Patna" loading="lazy" />
-            <span class="service-badge">Premium</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Wedding Car Rental</h3>
-            <p>Decorated luxury cars for wedding ceremonies to make your special day grand.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr5.jpg" alt="Tour Packages Bihar India" loading="lazy" />
-            <span class="service-badge">Best Value</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Tour Packages</h3>
-            <p>Exciting tour packages across Bihar and India with budget-friendly pricing.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card-img">
-            <img src="sr6.jpg" alt="Corporate Cab Booking Patna" loading="lazy" />
-            <span class="service-badge">Corporate</span>
-          </div>
-          <div class="service-card-body">
-            <h3>Corporate Booking</h3>
-            <p>Custom taxi solutions for corporate events, meetings, and staff transport.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="route-grid">
+          <div class="route" data-cat="pilgrim"><button data-drop="Bodh Gaya" data-trip="Round Trip"><b>Patna to Bodh Gaya</b><small>Day trip · Sedan or SUV</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Bodh Gaya rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Bodh%20Gaya."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="pilgrim"><button data-drop="Rajgir" data-trip="Round Trip"><b>Patna to Rajgir &amp; Nalanda</b><small>Day trip · Sedan or SUV</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Rajgir rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Rajgir%20%26%20Nalanda."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="pilgrim"><button data-drop="Varanasi" data-trip="Round Trip"><b>Patna to Varanasi</b><small>1 to 2 days · Sedan or Innova</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Varanasi rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Varanasi."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="pilgrim"><button data-drop="Deoghar (Baba Dham)" data-trip="Round Trip"><b>Patna to Deoghar</b><small>1 to 2 days · Baba Baidyanath Dham</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Deoghar rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Deoghar."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="pilgrim"><button data-drop="Vaishali" data-trip="Round Trip"><b>Patna to Vaishali</b><small>Day trip · Any car</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Vaishali rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Vaishali."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="pilgrim"><button data-drop="Pawapuri" data-trip="Round Trip"><b>Patna to Pawapuri</b><small>Day trip · Any car</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Pawapuri rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Pawapuri."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
 
-  <!-- ═══ HOW IT WORKS ═══ -->
-  <section class="section how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">How It Works</span>
-        <h2>Book Your Ride in 3 Easy Steps</h2>
-        <p>Getting a cab has never been easier. Follow these simple steps and you're on your way!</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card fade-up">
-          <div class="step-number">1</div>
-          <h3>Call or WhatsApp Us</h3>
-          <p>Reach us anytime at 9263220075. Share your pickup location, destination, and preferred time.</p>
-        </div>
-        <div class="step-card fade-up">
-          <div class="step-number">2</div>
-          <h3>Confirm Your Booking</h3>
-          <p>We'll confirm your ride with driver details, car type, and transparent pricing — no hidden fees.</p>
-        </div>
-        <div class="step-card fade-up">
-          <div class="step-number">3</div>
-          <h3>Enjoy Your Ride</h3>
-          <p>Your driver arrives on time in a clean, AC vehicle. Sit back, relax, and enjoy the journey!</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="route" data-cat="city" hidden><button data-drop="Ranchi" data-trip="One Way"><b>Patna to Ranchi</b><small>1 to 2 days · Sedan or Innova</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Ranchi rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Ranchi."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="city" hidden><button data-drop="Muzaffarpur" data-trip="One Way"><b>Patna to Muzaffarpur</b><small>Day trip · Any car</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Muzaffarpur rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Muzaffarpur."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="city" hidden><button data-drop="Bhagalpur" data-trip="One Way"><b>Patna to Bhagalpur</b><small>1 day · Sedan or SUV</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Bhagalpur rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Bhagalpur."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="city" hidden><button data-drop="Darbhanga" data-trip="One Way"><b>Patna to Darbhanga</b><small>Day trip · Any car</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Darbhanga rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Darbhanga."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="city" hidden><button data-drop="Gorakhpur" data-trip="One Way"><b>Patna to Gorakhpur</b><small>1 to 2 days · Sedan or SUV</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Gorakhpur rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Gorakhpur."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="city" hidden><button data-drop="Kolkata" data-trip="One Way"><b>Patna to Kolkata</b><small>2 to 3 days · Sedan or Innova</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Kolkata rate" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20Kolkata."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
 
-  <!-- ═══ OUR FLEET ═══ -->
-  <section class="section fleet" id="fleet">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Our Fleet</span>
-        <h2>Well-Maintained & Comfortable Cars</h2>
-        <p>Choose from a wide range of sedans, SUVs, and luxury vehicles for every occasion.</p>
+          <div class="route" data-cat="transfer" hidden><button data-drop="Patna Airport" data-trip="Local"><b>Patna Airport</b><small>Pickup &amp; drop · 24/7</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for airport transfer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20Patna%20Airport%20pickup%2Fdrop."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="transfer" hidden><button data-drop="Patna Junction" data-trip="Local"><b>Patna Junction</b><small>Railway station pickup &amp; drop</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Patna Junction transfer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20Patna%20Junction%20pickup%2Fdrop."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="transfer" hidden><button data-drop="Danapur Station" data-trip="Local"><b>Danapur Station</b><small>Railway station pickup &amp; drop</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Danapur transfer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20Danapur%20Station%20pickup%2Fdrop."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="transfer" hidden><button data-drop="Rajendra Nagar Terminal" data-trip="Local"><b>Rajendra Nagar Terminal</b><small>Railway station pickup &amp; drop</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Rajendra Nagar transfer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20Rajendra%20Nagar%20Terminal%20pickup%2Fdrop."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+          <div class="route" data-cat="transfer" hidden><button data-drop="Patliputra Junction" data-trip="Local"><b>Patliputra Junction</b><small>Railway station pickup &amp; drop</small><svg width="16" height="16"><use href="#i-arrow" /></svg></button><a target="_blank" rel="noopener noreferrer" aria-label="WhatsApp for Patliputra transfer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20Patliputra%20Junction%20pickup%2Fdrop."><svg width="18" height="18"><use href="#i-wa" /></svg></a></div>
+        </div>
+        <p class="route-more">Going somewhere else? We take any long-distance trip from Patna. <a target="_blank"
+            rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20cab%20from%20Patna%20to%20">Ask
+            for your route</a> and we will send the rate.</p>
       </div>
-      <div class="fleet-grid">
-        <div class="fleet-card fade-up">
-          <img src="sr1.jpg" alt="Swift Dzire Sedan Patna" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Swift Dzire</h3>
-              <p>Perfect for city rides & airport transfers</p>
-            </div>
-          </div>
-        </div>
-        <div class="fleet-card fade-up">
-          <img src="sr3.jpg" alt="Innova Crysta SUV Patna" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Innova Crysta</h3>
-              <p>Spacious & premium for family trips</p>
-            </div>
-          </div>
-        </div>
-        <div class="fleet-card fade-up">
-          <img src="sr6.jpg" alt="Toyota Fortuner Patna" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Toyota Fortuner</h3>
-              <p>Luxury SUV for corporate & VIP travel</p>
-            </div>
-          </div>
-        </div>
-        <div class="fleet-card fade-up">
-          <img src="sr5.jpg" alt="Innova for Outstation" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Innova</h3>
-              <p>Comfortable rides for outstation journeys</p>
-            </div>
-          </div>
-        </div>
-        <div class="fleet-card fade-up">
-          <img src="sr4.jpg" alt="Wedding Decorated Car" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Wedding Special</h3>
-              <p>Beautifully decorated cars for weddings</p>
-            </div>
-          </div>
-        </div>
-        <div class="fleet-card fade-up">
-          <img src="sr2.jpg" alt="Airport Transfer Car" loading="lazy" />
-          <div class="fleet-card-overlay">
-            <div>
-              <h3>Airport Special</h3>
-              <p>Reliable rides for airport transfers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ WHY CHOOSE US ═══ -->
-  <section class="section why-us" id="why-us">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Why Choose Us</span>
-        <h2>Patna's Most Trusted Cab Service</h2>
-        <p>Over 20 years of delivering safe, reliable, and comfortable rides across Bihar and beyond.</p>
+    <!-- ═══ SERVICES ═══ -->
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow">Our Services · Tap to Open</span>
+        <h2>Cars for <span class="hl">every kind of trip</span></h2>
+        <div class="acc-grid">
+          <details class="acc" open>
+            <summary>Outstation Trips</summary>
+            <ul>
+              <li>Round trips and one-way drops across Bihar, Jharkhand, UP and West Bengal</li>
+              <li>One car and one driver for the whole trip</li>
+              <li>Per-km fares, told to you before you book</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20an%20outstation%20cab."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+          <details class="acc">
+            <summary>Local City Rides</summary>
+            <ul>
+              <li>8 hours / 80 km packages from ₹2,000</li>
+              <li>Shopping, hospital visits, meetings and sightseeing</li>
+              <li>Car and driver wait for you between stops</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20local%20cab%20in%20Patna."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+          <details class="acc">
+            <summary>Airport &amp; Station Transfers</summary>
+            <ul>
+              <li>Jay Prakash Narayan Airport pickup and drop, 24/7</li>
+              <li>Patna Junction, Danapur, Rajendra Nagar and Patliputra stations</li>
+              <li>Early morning and late night trains and flights</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20an%20airport%20%2F%20station%20transfer."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+          <details class="acc">
+            <summary>Wedding Car Rental</summary>
+            <ul>
+              <li>Decorated cars for the groom and the baraat</li>
+              <li>Fortuner, Innova Crysta and sedans for guests</li>
+              <li>Multiple cars on the same day</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20cars%20for%20a%20wedding."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+          <details class="acc">
+            <summary>Corporate Travel</summary>
+            <ul>
+              <li>Cars for meetings, guests and staff transport</li>
+              <li>Daily, weekly or monthly bookings</li>
+              <li>Clean cars and on-time drivers</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20need%20a%20corporate%20cab%20booking."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+          <details class="acc">
+            <summary>Tour Packages</summary>
+            <ul>
+              <li>Bodh Gaya, Rajgir, Nalanda, Vaishali and more</li>
+              <li>Multi-day tours across Bihar and India</li>
+              <li>Same car and driver for the whole tour</li>
+            </ul>
+            <a class="btn btn-wa btn-block" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075?text=Hi%2C%20I%20want%20a%20tour%20package."><svg width="16" height="16"><use href="#i-wa" /></svg> Get Rate</a>
+          </details>
+        </div>
       </div>
-      <div class="why-grid">
-        <div class="why-card fade-up">
-          <div class="why-icon">🕐</div>
-          <h3>24/7 Availability</h3>
-          <p>Round-the-clock cab service. Book anytime — early morning or late night.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon">👨‍✈️</div>
-          <h3>Professional Drivers</h3>
-          <p>Verified, trained, and courteous drivers who know every route in Bihar.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon">💰</div>
-          <h3>Transparent Pricing</h3>
-          <p>No hidden charges. Get upfront pricing before every trip starts.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon">🛡️</div>
-          <h3>Safe & Secure</h3>
-          <p>GPS-tracked vehicles and regular sanitization for your safety.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon">🚗</div>
-          <h3>Well-Maintained Fleet</h3>
-          <p>Clean, air-conditioned, and regularly serviced vehicles for every ride.</p>
-        </div>
-        <div class="why-card fade-up">
-          <div class="why-icon">⭐</div>
-          <h3>Since 2005</h3>
-          <p>20+ years of trusted service with thousands of happy customers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ POPULAR ROUTES ═══ -->
-  <section class="section routes" id="routes">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Popular Routes</span>
-        <h2>Top Destinations from Patna</h2>
-        <p>Explore the most booked routes by our customers with affordable and fixed pricing.</p>
+    <!-- ═══ PRICING ═══ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <span class="eyebrow">Pricing</span>
+        <h2>How your rate is <span class="hl">worked out</span></h2>
+        <p class="lead">Four things make up every outstation fare. We tell you all four before you book, so the final
+          figure is never a surprise.</p>
+        <div class="grid4">
+          <div class="num-card"><span>01</span>
+            <h3>Per Km Rate</h3>
+            <p>Every car has its own per-km rate. Sedan ₹13, Ertiga ₹15, Scorpio ₹17, Innova Crysta ₹22 on round trips.</p>
+          </div>
+          <div class="num-card"><span>02</span>
+            <h3>Minimum 200 Km</h3>
+            <p>Round trips are billed for at least 200 km, even if you travel less.</p>
+          </div>
+          <div class="num-card"><span>03</span>
+            <h3>Driver Charge</h3>
+            <p>A ₹200 driver charge is added on outstation round trips.</p>
+          </div>
+          <div class="num-card"><span>04</span>
+            <h3>Toll, Parking &amp; Food</h3>
+            <p>Toll tax, parking and driver food are paid as they come. Nothing added on top.</p>
+          </div>
+        </div>
+        <div class="center"><a href="#book" class="btn btn-amber btn-lg"><svg width="18" height="18"><use href="#i-wa" /></svg> Get Your Exact Fare</a></div>
       </div>
-      <div class="routes-grid">
-        <div class="route-card fade-up">
-          <div class="route-icon">🏛️</div>
-          <div class="route-info">
-            <h3>Patna → Gaya (Bodh Gaya)</h3>
-            <p>~120 km · 2.5 hrs</p>
-            <span class="route-price">Starting ₹3,000</span>
-          </div>
-        </div>
-        <div class="route-card fade-up">
-          <div class="route-icon">🏔️</div>
-          <div class="route-info">
-            <h3>Patna → Rajgir & Nalanda</h3>
-            <p>~100 km · 2 hrs</p>
-            <span class="route-price">Starting ₹2,200</span>
-          </div>
-        </div>
-        <div class="route-card fade-up">
-          <div class="route-icon">🛕</div>
-          <div class="route-info">
-            <h3>Patna → Varanasi</h3>
-            <p>~300 km · 5.5 hrs</p>
-            <span class="route-price">Starting ₹5,500</span>
-          </div>
-        </div>
-        <div class="route-card fade-up">
-          <div class="route-icon">🏙️</div>
-          <div class="route-info">
-            <h3>Patna → Ranchi</h3>
-            <p>~320 km · 6 hrs</p>
-            <span class="route-price">Starting ₹6,000</span>
-          </div>
-        </div>
-        <div class="route-card fade-up">
-          <div class="route-icon">✈️</div>
-          <div class="route-info">
-            <h3>Patna Airport Transfer</h3>
-            <p>Jay Prakash Narayan Airport</p>
-            <span class="route-price">Starting ₹500</span>
-          </div>
-        </div>
-        <div class="route-card fade-up">
-          <div class="route-icon">🚂</div>
-          <div class="route-info">
-            <h3>Patna Junction Transfer</h3>
-            <p>Railway Station Pickup/Drop</p>
-            <span class="route-price">Starting ₹700</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ TESTIMONIALS ═══ -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Testimonials</span>
-        <h2>What Our Customers Say</h2>
-        <p>Trusted by thousands of riders across Patna and Bihar.</p>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Best cab service in Patna! I've been using Yellow Cab for airport transfers for the past 3 years.
-            Always on time and very professional drivers."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RK</div>
-            <div>
-              <h4>Rajesh Kumar</h4>
-              <p>Regular Customer</p>
-            </div>
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <section class="section section-tight">
+      <div class="container">
+        <span class="eyebrow">How It Works</span>
+        <h2>Three <span class="hl">steps</span></h2>
+        <div class="grid3">
+          <div class="step-card"><span>1</span>
+            <h3>Tell Us the Trip</h3>
+            <p>Pickup, drop, date and car. On WhatsApp or by phone, we answer 24 hours.</p>
           </div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Used their wedding car service for my daughter's wedding. The decorated car was stunning and the
-            driver was extremely courteous. Highly recommended!"</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SP</div>
-            <div>
-              <h4>Sunita Prasad</h4>
-              <p>Wedding Service</p>
-            </div>
+          <div class="step-card"><span>2</span>
+            <h3>Get Your Rate</h3>
+            <p>Per-km rate, minimum km, driver charge and toll. All in one message.</p>
           </div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Our company uses Yellow Cab for all corporate travel in Patna. Reliable, affordable, and
-            professional. The best in business!"</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">AV</div>
-            <div>
-              <h4>Amit Verma</h4>
-              <p>Corporate Client</p>
-            </div>
+          <div class="step-card"><span>3</span>
+            <h3>Travel</h3>
+            <p>Your car and driver reach your pickup point on the date you booked.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ CTA SECTION ═══ -->
-  <section class="cta-section" id="contact">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <h2>Ready to Ride? <span
-            style="background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Book
-            Now!</span></h2>
-        <p>Call us or send a WhatsApp message for instant booking. Available 24 hours, 7 days a week.</p>
-        <div class="cta-buttons">
-          <a href="tel:+919263220075" class="btn-gold">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-            </svg>
-            Call 9263220075
-          </a>
-          <a href="https://wa.me/+919263220075" target="_blank" rel="noopener noreferrer" class="btn-outline">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.478l4.572-1.467A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-2.169 0-4.207-.58-5.963-1.585l-.428-.254-2.715.871.865-2.633-.279-.443A9.77 9.77 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z" />
-            </svg>
-            WhatsApp Us
-          </a>
+    <!-- ═══ LOCAL PACKAGE HIGHLIGHT ═══ -->
+    <section class="section section-tight">
+      <div class="container">
+        <div class="offer-box">
+          <span class="eyebrow eyebrow-center">Local Package</span>
+          <h2><span class="hl-plain">8 Hours · 80 Km</span> in Patna</h2>
+          <p>A car and driver for your whole day in the city. Toll, parking and driver food extra.</p>
+          <div class="offer-prices">
+            <span>Mini <b>₹2,000</b></span>
+            <span>Sedan <b>₹2,500</b></span>
+            <span>SUV <b>₹3,500</b></span>
+            <span>Innova Crysta <b>₹4,500</b></span>
+          </div>
+          <a class="btn btn-wa" target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/919263220075?text=Hi%2C%20I%20want%20to%20book%20a%20local%20package%20(8%20hrs%20%2F%2080%20km)."><svg
+              width="18" height="18"><use href="#i-wa" /></svg> Book Local Package on WhatsApp</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section section-tight" id="testimonials">
+      <div class="container">
+        <span class="eyebrow">Reviews</span>
+        <h2>What our <span class="hl">riders say</span></h2>
+        <div class="grid3">
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Best cab service in Patna! I've been using Yellow Cab for airport transfers for the past 3
+              years. Always on time and very professional drivers."</blockquote>
+            <figcaption><i>RK</i><span><b>Rajesh Kumar</b>Regular Customer</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Used their wedding car service for my daughter's wedding. The decorated car was stunning and
+              the driver was extremely courteous. Highly recommended!"</blockquote>
+            <figcaption><i>SP</i><span><b>Sunita Prasad</b>Wedding Service</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Our company uses Yellow Cab for all corporate travel in Patna. Reliable, affordable, and
+              professional. The best in business!"</blockquote>
+            <figcaption><i>AV</i><span><b>Amit Verma</b>Corporate Client</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common <span class="hl">questions</span></h2>
+        <div class="faq-grid">
+          <details class="faq">
+            <summary>What cars do you have?</summary>
+            <p>Mini (hatchback), Sedan, Ertiga, Scorpio and Innova Crysta, plus Fortuner and decorated cars for weddings
+              on request.</p>
+          </details>
+          <details class="faq">
+            <summary>What does the local package include?</summary>
+            <p>8 hours and 80 km with a driver: Mini ₹2,000, Sedan ₹2,500, SUV (Ertiga / Scorpio) ₹3,500 and Innova
+              Crysta ₹4,500. Toll, parking and driver food are extra.</p>
+          </details>
+          <details class="faq">
+            <summary>How is an outstation round trip charged?</summary>
+            <p>Per km: Sedan ₹13, Ertiga ₹15, Scorpio ₹17, Innova Crysta ₹22. Minimum 200 km, plus ₹200 driver charge,
+              toll tax, parking and driver food.</p>
+          </details>
+          <details class="faq">
+            <summary>Do you do one-way drops?</summary>
+            <p>Yes. ₹20/km for a Sedan and ₹26/km for an Ertiga, plus toll. You pay for one side only.</p>
+          </details>
+          <details class="faq">
+            <summary>Are toll and parking included?</summary>
+            <p>No. Toll tax, parking and driver food are paid separately as they come, on every trip type.</p>
+          </details>
+          <details class="faq">
+            <summary>Is a driver included?</summary>
+            <p>Yes. Every car comes with a driver, on every trip.</p>
+          </details>
+          <details class="faq">
+            <summary>Do I need to pay an advance to get a rate?</summary>
+            <p>No. Send your trip details on WhatsApp or call 9263220075 and we share the fare first.</p>
+          </details>
+          <details class="faq">
+            <summary>When can I call you?</summary>
+            <p>Any time. We are open 24 hours, 7 days a week, including airport and station pickups at night.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FIND US ═══ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <span class="eyebrow">Find Us</span>
+        <h2>Yellow Cabs <span class="hl">Patna</span></h2>
+        <p class="lead">Pickup from anywhere in Patna, or from the airport or any railway station.</p>
+        <div class="map">
+          <iframe title="Yellow Cabs Patna on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.6609254687505!2d85.04673759378983!3d25.611873782540304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2ccf1668d309ca91%3A0xf8773f1bc8fb2520!2sYellow%20Cabs%20Patna!5e1!3m2!1sen!2sin!4v1779031529789!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-btns">
+          <a class="btn btn-ghost" target="_blank" rel="noopener noreferrer"
+            href="https://www.google.com/maps/search/?api=1&query=Yellow+Cabs+Patna"><svg width="16" height="16"><use href="#i-pin" /></svg> Open in Google Maps</a>
+          <a class="btn btn-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075"><svg
+              width="16" height="16"><use href="#i-wa" /></svg> WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo1.png" alt="Yellow Cab Patna" />
-          <p>Your trusted partner for travel and car rental services since 2005. Comfortable rides, affordable prices,
-            and professional service guaranteed.</p>
-          <div class="footer-social">
-            <a href="https://wa.me/+919263220075" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
-            <a href="tel:+919263220075" aria-label="Call">📞</a>
-            <a href="mailto:yellowcabpatna@gmail.com" aria-label="Email">✉️</a>
-          </div>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <img src="logo1.png" alt="Yellow Cabs Patna logo" />
+          <span><b>Yellow Cabs</b><small>PATNA</small></span>
+        </a>
+        <p class="footer-about">Local, outstation and one-way cabs from Patna since 2005. Mini, Sedan, Ertiga, Scorpio and
+          Innova Crysta. Driver included.</p>
+        <div class="footer-btns">
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" href="https://wa.me/919263220075"><svg
+              width="16" height="16"><use href="#i-wa" /></svg> WhatsApp</a>
+          <a class="btn btn-ghost btn-sm" href="tel:+919263220075"><svg width="14" height="14"><use href="#i-phone" /></svg> 92632 20075</a>
         </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#fleet">Our Fleet</a></li>
-            <li><a href="#why-us">Why Choose Us</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Our Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="#services">Car Rental</a></li>
-            <li><a href="#services">Airport Taxi</a></li>
-            <li><a href="#services">Railway Station Pickup</a></li>
-            <li><a href="#services">Wedding Car Rental</a></li>
-            <li><a href="#services">Tour Packages</a></li>
-            <li><a href="#services">Corporate Booking</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact-info">
-          <h4>Contact Us</h4>
-          <p>📍 Patna, Bihar, India</p>
-          <p>📞 <a href="tel:+919263220075">9263220075</a></p>
-          <p>✉️ <a href="mailto:yellowcabpatna@gmail.com">yellowcabpatna@gmail.com</a></p>
-          <div class="footer-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.6609254687505!2d85.04673759378983!3d25.611873782540304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2ccf1668d309ca91%3A0xf8773f1bc8fb2520!2sYellow%20Cabs%20Patna!5e1!3m2!1sen!2sin!4v1779031529789!5m2!1sen!2sin"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+        <p class="footer-mail">✉️ <a href="mailto:yellowcabpatna@gmail.com">yellowcabpatna@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Fares</h4>
+        <ul class="footer-links">
+          <li><a href="#fleet">Mini · ₹2,000 local</a></li>
+          <li><a href="#fleet">Sedan · ₹13/km round trip</a></li>
+          <li><a href="#fleet">Ertiga · ₹15/km round trip</a></li>
+          <li><a href="#fleet">Scorpio · ₹17/km round trip</a></li>
+          <li><a href="#fleet">Innova Crysta · ₹22/km round trip</a></li>
+          <li><a href="#fleet">One way · from ₹20/km</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Routes From Patna</h4>
+        <div class="footer-chips">
+          <a href="#routes">Bodh Gaya</a><a href="#routes">Rajgir</a><a href="#routes">Nalanda</a><a
+            href="#routes">Varanasi</a><a href="#routes">Deoghar</a><a href="#routes">Vaishali</a><a
+            href="#routes">Pawapuri</a><a href="#routes">Ranchi</a><a href="#routes">Muzaffarpur</a><a
+            href="#routes">Bhagalpur</a><a href="#routes">Darbhanga</a><a href="#routes">Gorakhpur</a><a
+            href="#routes">Kolkata</a><a href="#routes">Patna Airport</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Yellow Cab Patna. All Rights Reserved.</p>
-      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Yellow Cabs Patna. All Rights Reserved.</span>
+      <span>Open 24 hours · 9263220075</span>
     </div>
   </footer>
 
-  <!-- ═══ FLOATING BUTTONS ═══ -->
-  <div class="floating-buttons">
-    <a href="tel:+919263220075" class="float-btn call" aria-label="Call us" id="floatCall">
-      <svg viewBox="0 0 24 24" fill="#1A1A2E">
-        <path
-          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-      </svg>
-    </a>
-    <a href="https://wa.me/+919263220075" target="_blank" rel="noopener noreferrer" class="float-btn whatsapp"
-      aria-label="WhatsApp" id="floatWhatsapp">
-      <svg viewBox="0 0 24 24" fill="white">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.478l4.572-1.467A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-2.169 0-4.207-.58-5.963-1.585l-.428-.254-2.715.871.865-2.633-.279-.443A9.77 9.77 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z" />
-      </svg>
-    </a>
+  <!-- ═══ FLOATING ACTION BAR ═══ -->
+  <div class="action-bar">
+    <a href="tel:+919263220075" class="ab-call"><svg width="16" height="16"><use href="#i-phone" /></svg> Call</a>
+    <a href="https://wa.me/919263220075" target="_blank" rel="noopener noreferrer" class="ab-wa"><svg width="18"
+        height="18"><use href="#i-wa" /></svg> WhatsApp</a>
+    <a href="#book" class="ab-book">Book Now</a>
   </div>
 
   <!-- ═══ JAVASCRIPT ═══ -->
   <script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    const WA_NUMBER = '919263220075';
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/yellowcabpatna@gmail.com';
 
-    // Mobile menu toggle
+    // ─── Header: shadow on scroll + mobile menu ───
+    const header = document.getElementById('header');
     const menuToggle = document.getElementById('menuToggle');
-    const navbarLinks = document.getElementById('navbarLinks');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
     menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navbarLinks.classList.toggle('active');
-      document.body.style.overflow = navbarLinks.classList.contains('active') ? 'hidden' : '';
+      const open = header.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', open);
     });
-    navbarLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navbarLinks.classList.remove('active');
-        document.body.style.overflow = '';
+    document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => {
+      header.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', false);
+    }));
+
+    // ─── Reveal on scroll ───
+    const revealer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); revealer.unobserve(e.target); }
       });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.section .container > *').forEach(el => {
+      el.classList.add('reveal');
+      revealer.observe(el);
     });
 
-    // Intersection Observer for fade-up animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 100);
-          observer.unobserve(entry.target);
-        }
+    // ─── Gallery carousel ───
+    document.querySelectorAll('[data-carousel]').forEach(car => {
+      const track = car.querySelector('.car-track');
+      const slides = [...track.children];
+      const dots = car.querySelector('.car-dots');
+      slides.forEach((s, i) => {
+        const d = document.createElement('button');
+        d.setAttribute('aria-label', `Photo ${i + 1}`);
+        d.addEventListener('click', () => track.scrollTo({ left: s.offsetLeft - track.offsetLeft, behavior: 'smooth' }));
+        dots.appendChild(d);
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      const step = () => slides[0].getBoundingClientRect().width + 12;
+      car.querySelector('.prev').addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+      car.querySelector('.next').addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+      const sync = () => {
+        const i = Math.round(track.scrollLeft / step());
+        [...dots.children].forEach((d, j) => d.classList.toggle('active', j === i));
+      };
+      track.addEventListener('scroll', sync, { passive: true });
+      sync();
+    });
 
-    document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => observer.observe(el));
+    // ─── Route filter pills ───
+    const pills = document.querySelectorAll('.filter-pills button');
+    pills.forEach(p => p.addEventListener('click', () => {
+      pills.forEach(x => x.classList.toggle('active', x === p));
+      document.querySelectorAll('.route').forEach(r => { r.hidden = r.dataset.cat !== p.dataset.filter; });
+    }));
 
-    // Counter animation for stats
-    function animateCounter(el, target, suffix = '') {
-      let current = 0;
-      const increment = target / 60;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) { current = target; clearInterval(timer); }
-        el.textContent = Math.floor(current) + suffix;
-      }, 25);
+    // ─── Booking form ───
+    const form = document.getElementById('bookingForm');
+    const carSelect = document.getElementById('car');
+    const fareHint = document.getElementById('fareHint');
+    const returnGroup = document.getElementById('returnGroup');
+    const dateInput = document.getElementById('date');
+    const returnInput = document.getElementById('returnDate');
+
+    // Trip value -> data attribute on <option> holding that car's fare
+    const TRIP_KEY = { 'Local': 'local', 'Round Trip': 'round', 'One Way': 'oneway' };
+    const tripValue = () => form.querySelector('input[name="trip"]:checked').value;
+
+    function updateTrip() {
+      const key = TRIP_KEY[tripValue()];
+      returnGroup.classList.toggle('is-off', key !== 'round');
+      returnInput.disabled = key !== 'round';
+
+      // Only offer cars that have a fare for this trip type
+      [...carSelect.options].forEach(opt => {
+        const available = opt.value === 'Not sure' || opt.dataset[key] !== undefined;
+        opt.hidden = !available;
+        opt.disabled = !available;
+      });
+      if (carSelect.selectedOptions[0].disabled) carSelect.value = 'Sedan';
+      updateHint();
     }
-    const statObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const stats = entry.target.querySelectorAll('.stat-item h3');
-          stats.forEach(s => {
-            const text = s.textContent;
-            const num = parseInt(text);
-            const suffix = text.replace(/[0-9]/g, '');
-            animateCounter(s, num, suffix);
+
+    function updateHint() {
+      const key = TRIP_KEY[tripValue()];
+      const fare = carSelect.selectedOptions[0].dataset[key];
+      if (!fare) { fareHint.textContent = ''; return; }
+      const rate = Number(fare).toLocaleString('en-IN');
+      fareHint.textContent = {
+        local: `₹${rate} for 8 hrs / 80 km · toll, parking & driver food extra`,
+        round: `₹${rate}/km · min 200 km · ₹200 driver charge · toll, parking & food extra`,
+        oneway: `₹${rate}/km · toll, parking & driver food extra`,
+      }[key];
+    }
+
+    function setTrip(value) {
+      form.querySelector(`input[name="trip"][value="${value}"]`).checked = true;
+      updateTrip();
+    }
+
+    form.querySelectorAll('input[name="trip"]').forEach(r => r.addEventListener('change', updateTrip));
+    carSelect.addEventListener('change', updateHint);
+
+    // Dates: no past dates, quick Today / Tomorrow chips
+    const isoDate = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    dateInput.min = returnInput.min = isoDate(new Date());
+    dateInput.value = dateInput.min;
+    dateInput.addEventListener('change', () => { returnInput.min = dateInput.value || dateInput.min; });
+    document.querySelectorAll('.date-chips button').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const d = new Date();
+        d.setDate(d.getDate() + Number(chip.dataset.days));
+        dateInput.value = isoDate(d);
+        dateInput.dispatchEvent(new Event('change'));
+        document.querySelectorAll('.date-chips button').forEach(c => c.classList.toggle('active', c === chip));
+      });
+    });
+
+    // Route cards fill the form
+    document.querySelectorAll('.route button[data-drop]').forEach(btn => btn.addEventListener('click', () => {
+      document.getElementById('destination').value = btn.dataset.drop;
+      setTrip(btn.dataset.trip);
+      document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => document.getElementById('name').focus({ preventScroll: true }), 600);
+    }));
+
+    function sendLead(data) {
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+        keepalive: true,
+      }).catch(() => { });
+    }
+
+    // Submit: open WhatsApp with the trip details, and still email the lead via FormSubmit
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      const lines = [
+        'Hi Yellow Cabs, I need a rate:',
+        `Trip: ${data.get('trip')}`,
+        `Car: ${data.get('car')}`,
+        data.get('pickup') && `Pickup: ${data.get('pickup')}`,
+        data.get('destination') && `Drop: ${data.get('destination')}`,
+        data.get('date') && `Date: ${data.get('date')}`,
+        data.get('return_date') && `Return: ${data.get('return_date')}`,
+        `Name: ${data.get('name')}`,
+        `Phone: ${data.get('phone')}`,
+      ].filter(Boolean);
+
+      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+      if (!window.open(url, '_blank')) window.location.href = url;
+
+      sendLead(data);
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { trip_type: data.get('trip') });
+    });
+
+    // Hero "enter your WhatsApp number" call-back request
+    document.getElementById('callbackForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      data.append('_subject', 'Call-back request - Yellow Cabs website');
+      sendLead(data);
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { trip_type: 'callback' });
+      e.target.reset();
+      document.getElementById('callbackMsg').textContent = "Thanks! We'll message you on WhatsApp shortly.";
+    });
+
+    updateTrip();
+
+    // ─── Place suggestions for Pickup / Drop ───
+    // Popular places show instantly; anything else comes from Photon (free OpenStreetMap search, no API key).
+    const POPULAR_PLACES = [
+      ['Patna', 'Bihar'], ['Patna Airport (Jay Prakash Narayan)', 'Patna, Bihar'], ['Patna Junction', 'Patna, Bihar'],
+      ['Patliputra Junction', 'Patna, Bihar'], ['Rajendra Nagar Terminal', 'Patna, Bihar'], ['Danapur', 'Patna, Bihar'],
+      ['Gaya', 'Bihar'], ['Bodh Gaya', 'Gaya, Bihar'], ['Rajgir', 'Nalanda, Bihar'], ['Nalanda', 'Bihar'],
+      ['Pawapuri', 'Nalanda, Bihar'], ['Vaishali', 'Bihar'], ['Hajipur', 'Vaishali, Bihar'], ['Muzaffarpur', 'Bihar'],
+      ['Darbhanga', 'Bihar'], ['Bhagalpur', 'Bihar'], ['Begusarai', 'Bihar'], ['Arrah', 'Bhojpur, Bihar'],
+      ['Buxar', 'Bihar'], ['Sasaram', 'Rohtas, Bihar'], ['Chhapra', 'Saran, Bihar'], ['Siwan', 'Bihar'],
+      ['Motihari', 'East Champaran, Bihar'], ['Bettiah', 'West Champaran, Bihar'], ['Purnia', 'Bihar'],
+      ['Deoghar', 'Jharkhand'], ['Ranchi', 'Jharkhand'], ['Dhanbad', 'Jharkhand'], ['Varanasi', 'Uttar Pradesh'],
+      ['Gorakhpur', 'Uttar Pradesh'], ['Prayagraj', 'Uttar Pradesh'], ['Kolkata', 'West Bengal'], ['Siliguri', 'West Bengal'],
+    ];
+    const PHOTON_URL = 'https://photon.komoot.io/api/?limit=6&lang=en&lat=25.61&lon=85.14&bbox=68.1,6.5,97.4,35.7&q=';
+
+    function attachPlaceSuggest(input) {
+      const list = document.createElement('ul');
+      list.className = 'ac-list';
+      list.setAttribute('role', 'listbox');
+      input.parentNode.appendChild(list);
+      input.setAttribute('role', 'combobox');
+      input.setAttribute('aria-autocomplete', 'list');
+
+      let items = [], active = -1, timer, controller;
+
+      const close = () => { list.classList.remove('open'); active = -1; };
+      const choose = item => { input.value = item.value; close(); };
+
+      function render(query) {
+        list.replaceChildren();
+        items.forEach((item, i) => {
+          const li = document.createElement('li');
+          li.setAttribute('role', 'option');
+          li.className = i === active ? 'active' : '';
+          const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          icon.setAttribute('width', '14'); icon.setAttribute('height', '14');
+          icon.innerHTML = '<use href="#i-pin" />';
+          const name = document.createElement('b');
+          // Bold the typed part when the name starts with it
+          if (item.name.toLowerCase().startsWith(query.toLowerCase())) {
+            name.append(item.name.slice(0, query.length));
+            const rest = document.createElement('span');
+            rest.textContent = item.name.slice(query.length);
+            name.append(rest);
+          } else {
+            name.textContent = item.name;
+          }
+          const sub = document.createElement('small');
+          sub.textContent = item.sub;
+          li.append(icon, name, sub);
+          // mousedown fires before the input's blur, so the pick isn't lost
+          li.addEventListener('mousedown', ev => { ev.preventDefault(); choose(item); });
+          list.appendChild(li);
+        });
+        list.classList.toggle('open', items.length > 0);
+      }
+
+      function localMatches(q) {
+        const ql = q.toLowerCase();
+        return POPULAR_PLACES
+          .filter(([n]) => n.toLowerCase().split(/[\s(]+/).some(w => w.startsWith(ql)) || n.toLowerCase().startsWith(ql))
+          .sort(([a], [b]) => b.toLowerCase().startsWith(ql) - a.toLowerCase().startsWith(ql))
+          .slice(0, 5)
+          .map(([name, sub]) => ({ name, sub, value: name }));
+      }
+
+      async function remoteMatches(q) {
+        controller?.abort();
+        controller = new AbortController();
+        try {
+          const res = await fetch(PHOTON_URL + encodeURIComponent(q), { signal: controller.signal });
+          const json = await res.json();
+          return json.features.map(f => {
+            const p = f.properties;
+            const parts = [p.city || p.county || p.district, p.state].filter((v, i, a) => v && v !== p.name && a.indexOf(v) === i);
+            return { name: p.name, sub: parts.join(', '), value: parts[0] ? `${p.name}, ${parts[0]}` : p.name };
+          }).filter(it => it.name);
+        } catch { return null; }
+      }
+
+      input.addEventListener('input', () => {
+        const q = input.value.trim();
+        clearTimeout(timer);
+        if (!q) { items = []; close(); return; }
+        items = localMatches(q);
+        active = -1;
+        render(q);
+        if (q.length < 2) return;
+        timer = setTimeout(async () => {
+          const remote = await remoteMatches(q);
+          if (!remote || input.value.trim() !== q) return;
+          const seen = new Set(items.map(it => (it.name + it.sub).toLowerCase()));
+          const seenNames = new Set(items.map(it => it.name.toLowerCase()));
+          remote.forEach(it => {
+            const key = (it.name + it.sub).toLowerCase();
+            if (!seen.has(key) && !seenNames.has(it.name.toLowerCase())) { seen.add(key); items.push(it); }
           });
-          statObserver.unobserve(entry.target);
+          items = items.slice(0, 8);
+          render(q);
+        }, 250);
+      });
+
+      input.addEventListener('keydown', e => {
+        if (!list.classList.contains('open')) return;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          active = (active + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+          render(input.value.trim());
+        } else if (e.key === 'Enter' && active >= 0) {
+          e.preventDefault();
+          choose(items[active]);
+        } else if (e.key === 'Escape') {
+          close();
         }
       });
-    }, { threshold: 0.5 });
-    const heroStats = document.querySelector('.hero-stats');
-    if (heroStats) statObserver.observe(heroStats);
+      input.addEventListener('blur', () => setTimeout(close, 120));
+    }
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Parallax on hero background
-    window.addEventListener('scroll', () => {
-      const heroBg = document.querySelector('.hero-bg');
-      if (heroBg) heroBg.style.transform = `scale(1.1) translateY(${window.scrollY * 0.3}px)`;
-    });
+    attachPlaceSuggest(document.getElementById('pickup'));
+    attachPlaceSuggest(document.getElementById('destination'));
   </script>
 </body>
 
