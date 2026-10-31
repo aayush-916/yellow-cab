@@ -282,6 +282,7 @@ svg { flex-shrink: 0; }
 .est-head b { font-family: var(--fh); font-size: 24px; color: var(--amber2); line-height: 1.2; }
 .est-route { color: #C9D1E3; font-size: 13px; margin-top: 2px; }
 .est-lines { margin: 8px 0 0; border-top: 1px dashed rgba(255,166,41,.3); padding-top: 6px; }
+.est-lines:empty { display: none; }
 .est-lines li { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); padding: 2px 0; }
 .est-lines b { color: var(--text); font-weight: 600; white-space: nowrap; }
 .est-cars { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }

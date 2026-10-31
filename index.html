@@ -1230,7 +1230,12 @@
     const FARE_RULES = {
       // 8 hrs / 80 km package, flat price per car, only for trips inside Patna
       // (Danapur & Khagaul to Patna City, incl. airport, Phulwari, Digha). Anything outside is outstation.
-      local: { area: { south: 25.53, north: 25.68, west: 84.98, east: 85.29 } },
+      local: {
+        area: { south: 25.53, north: 25.68, west: 84.98, east: 85.29 },
+        // Short trips inside Patna: a flat minimum fare by road distance, same for every car.
+        // Longer local trips use the 8 hrs / 80 km package above.
+        shortTrips: [{ underKm: 10, fare: 700 }, { upToKm: 20, fare: 1000 }],
+      },
       round: { minKm: 200, driverCharge: 200 },
       oneway: {},
     };
@@ -1341,7 +1346,12 @@
       const rate = Number(option.dataset[trip]);
       if (!rate) return null;
       if (trip === 'local') {
-        return { total: rate, lines: [['8 hrs / 80 km package', rupees(rate)]] };
+        // Customers only see the total for local trips, so no working lines here
+        const kmR = Math.round(km);
+        const [under10, upTo20] = FARE_RULES.local.shortTrips;
+        if (kmR < under10.underKm) return { total: under10.fare, lines: [] };
+        if (kmR <= upTo20.upToKm) return { total: upTo20.fare, lines: [] };
+        return { total: rate, lines: [] };
       }
       if (trip === 'oneway') {
         const kmR = Math.max(1, Math.round(km));
@@ -1407,7 +1417,7 @@
 
       const notes = ['Toll, parking and driver food extra.'];
       notes.unshift(route.inPatna
-        ? 'Both places are in Patna, so the local package applies.'
+        ? 'Both places are in Patna, so local fares apply.'
         : `${route.outsidePlace} is outside Patna, so outstation per-km rates apply (local packages are for Patna only).`);
       if (!route.byRoad) notes.push('Road distance is approximate.');
       notes.push('We confirm the final fare on WhatsApp.');
