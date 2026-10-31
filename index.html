@@ -75,6 +75,17 @@
       <path fill="currentColor"
         d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
     </symbol>
+    <symbol id="i-gps" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="7" />
+        <path d="M12 1v4M12 19v4M1 12h4M19 12h4" />
+      </g>
+      <circle cx="12" cy="12" r="3" fill="currentColor" />
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+        d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14" />
+    </symbol>
   </svg>
 
   <!-- ═══ TOP BAR ═══ -->
@@ -155,14 +166,25 @@
                 <label for="pickup">Pickup</label>
                 <div class="ac-wrap">
                   <input type="text" id="pickup" name="pickup" value="Patna" placeholder="Pickup city" autocomplete="off" />
+                  <button type="button" class="ac-map-btn" data-map-for="pickup" aria-label="Choose pickup on map"
+                    title="Choose on map"><svg width="16" height="16"><use href="#i-map" /></svg></button>
                 </div>
+                <input type="hidden" id="pickupMap" name="pickup_map" />
               </div>
               <div class="field">
                 <label for="destination">Drop</label>
                 <div class="ac-wrap">
                   <input type="text" id="destination" name="destination" placeholder="Drop city" autocomplete="off" />
+                  <button type="button" class="ac-map-btn" data-map-for="destination" aria-label="Choose drop on map"
+                    title="Choose on map"><svg width="16" height="16"><use href="#i-map" /></svg></button>
                 </div>
+                <input type="hidden" id="destinationMap" name="drop_map" />
               </div>
+            </div>
+            <div class="loc-row">
+              <button type="button" class="loc-link" id="useMyLocation"><svg width="14" height="14"><use href="#i-gps" /></svg>
+                Use my current location as pickup</button>
+              <span class="loc-msg" id="locMsg" aria-live="polite"></span>
             </div>
             <div class="grid2">
               <div class="field">
@@ -189,6 +211,17 @@
                 <option value="Not sure">Not sure yet, please suggest</option>
               </select>
               <p class="fare-hint" id="fareHint" aria-live="polite"></p>
+            </div>
+            <div class="estimate" id="estimate" hidden aria-live="polite">
+              <div class="est-head">
+                <span>Estimated Fare</span>
+                <b id="estTotal">…</b>
+              </div>
+              <p class="est-route" id="estRoute"></p>
+              <ul class="est-lines" id="estLines"></ul>
+              <div class="est-cars" id="estCars"></div>
+              <p class="est-note" id="estNote"></p>
+              <input type="hidden" name="estimate" id="estimateField" />
             </div>
             <div class="grid2">
               <div class="field">
@@ -268,7 +301,7 @@
       <div class="container">
         <span class="eyebrow">Fleet &amp; Fares</span>
         <h2>Our cars. <span class="hl">Clear fares.</span></h2>
-        <p class="lead">Local packages are 8 hours / 80 km. Outstation and one-way are per km. A driver comes with every
+        <p class="lead">Local packages (within Patna) are 8 hours / 80 km. Trips outside Patna are outstation, charged per km. A driver comes with every
           car, on every trip.</p>
         <div class="grid3">
           <article class="fleet-card">
@@ -278,7 +311,7 @@
             <p>Hatchback for budget rides around the city.</p>
             <div class="tags"><span>AC</span><span>Driver Included</span></div>
             <ul class="rates">
-              <li><span>Local · 8 hrs / 80 km</span><b>₹2,000</b></li>
+              <li><span>Local (Patna) · 8 hrs / 80 km</span><b>₹2,000</b></li>
             </ul>
             <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
               href="https://wa.me/919263220075?text=Hi%2C%20please%20send%20the%20rate%20for%20a%20Mini.">
@@ -291,7 +324,7 @@
             <p>Dzire or similar. For city, airport and outstation trips.</p>
             <div class="tags"><span>AC</span><span>Driver Included</span></div>
             <ul class="rates">
-              <li><span>Local · 8 hrs / 80 km</span><b>₹2,500</b></li>
+              <li><span>Local (Patna) · 8 hrs / 80 km</span><b>₹2,500</b></li>
               <li><span>Outstation round trip</span><b>₹13/km</b></li>
               <li><span>One way drop</span><b>₹20/km</b></li>
             </ul>
@@ -306,7 +339,7 @@
             <p>Room for a family and their luggage.</p>
             <div class="tags"><span>AC</span><span>Driver Included</span></div>
             <ul class="rates">
-              <li><span>Local · 8 hrs / 80 km</span><b>₹3,500</b></li>
+              <li><span>Local (Patna) · 8 hrs / 80 km</span><b>₹3,500</b></li>
               <li><span>Outstation round trip</span><b>₹15/km</b></li>
               <li><span>One way drop</span><b>₹26/km</b></li>
             </ul>
@@ -321,7 +354,7 @@
             <p>Strong SUV for long and rough roads.</p>
             <div class="tags"><span>AC</span><span>Driver Included</span></div>
             <ul class="rates">
-              <li><span>Local · 8 hrs / 80 km</span><b>₹3,500</b></li>
+              <li><span>Local (Patna) · 8 hrs / 80 km</span><b>₹3,500</b></li>
               <li><span>Outstation round trip</span><b>₹17/km</b></li>
             </ul>
             <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
@@ -335,7 +368,7 @@
             <p>The most comfortable ride for long journeys.</p>
             <div class="tags"><span>AC</span><span>Premium</span></div>
             <ul class="rates">
-              <li><span>Local · 8 hrs / 80 km</span><b>₹4,500</b></li>
+              <li><span>Local (Patna) · 8 hrs / 80 km</span><b>₹4,500</b></li>
               <li><span>Outstation round trip</span><b>₹22/km</b></li>
             </ul>
             <a class="btn btn-card btn-block" target="_blank" rel="noopener noreferrer"
@@ -521,7 +554,7 @@
         <div class="offer-box">
           <span class="eyebrow eyebrow-center">Local Package</span>
           <h2><span class="hl-plain">8 Hours · 80 Km</span> in Patna</h2>
-          <p>A car and driver for your whole day in the city. Toll, parking and driver food extra.</p>
+          <p>A car and driver for your whole day within Patna. Going outside Patna? Outstation per-km rates apply. Toll, parking and driver food extra.</p>
           <div class="offer-prices">
             <span>Mini <b>₹2,000</b></span>
             <span>Sedan <b>₹2,500</b></span>
@@ -576,7 +609,7 @@
           </details>
           <details class="faq">
             <summary>What does the local package include?</summary>
-            <p>8 hours and 80 km with a driver: Mini ₹2,000, Sedan ₹2,500, SUV (Ertiga / Scorpio) ₹3,500 and Innova
+            <p>For trips within Patna only: 8 hours and 80 km with a driver. Mini ₹2,000, Sedan ₹2,500, SUV (Ertiga / Scorpio) ₹3,500 and Innova
               Crysta ₹4,500. Toll, parking and driver food are extra.</p>
           </details>
           <details class="faq">
@@ -674,6 +707,32 @@
     </div>
   </footer>
 
+  <!-- ═══ MAP PICKER ═══ -->
+  <dialog class="map-dialog" id="mapDialog" aria-labelledby="mapTitle">
+    <div class="map-head">
+      <h3 id="mapTitle">Choose pickup location</h3>
+      <button type="button" class="map-close" id="mapClose" aria-label="Close map">✕</button>
+    </div>
+    <div class="map-search">
+      <div class="ac-wrap">
+        <input type="text" id="mapSearch" placeholder="Search area, street or landmark" autocomplete="off" />
+      </div>
+    </div>
+    <div class="map-stage">
+      <div id="mapCanvas"></div>
+      <div class="map-pin" aria-hidden="true"><svg width="48" height="48"><use href="#i-pin" /></svg></div>
+      <button type="button" class="map-locate" id="mapLocate" aria-label="Go to my current location"
+        title="My current location"><svg width="20" height="20"><use href="#i-gps" /></svg></button>
+    </div>
+    <div class="map-foot">
+      <div class="map-address">
+        <small>Move the map to place the pin</small>
+        <span id="mapAddress">Loading map…</span>
+      </div>
+      <button type="button" class="btn btn-amber" id="mapConfirm" disabled>Confirm Location</button>
+    </div>
+  </dialog>
+
   <!-- ═══ FLOATING ACTION BAR ═══ -->
   <div class="action-bar">
     <a href="tel:+919263220075" class="ab-call"><svg width="16" height="16"><use href="#i-phone" /></svg> Call</a>
@@ -770,17 +829,20 @@
     function updateHint() {
       const key = TRIP_KEY[tripValue()];
       const fare = carSelect.selectedOptions[0].dataset[key];
+      renderEstimate();
       if (!fare) { fareHint.textContent = ''; return; }
       const rate = Number(fare).toLocaleString('en-IN');
       fareHint.textContent = {
-        local: `₹${rate} for 8 hrs / 80 km · toll, parking & driver food extra`,
+        local: `₹${rate} for 8 hrs / 80 km within Patna · toll, parking & driver food extra`,
         round: `₹${rate}/km · min 200 km · ₹200 driver charge · toll, parking & food extra`,
         oneway: `₹${rate}/km · toll, parking & driver food extra`,
       }[key];
     }
 
     function setTrip(value) {
-      form.querySelector(`input[name="trip"][value="${value}"]`).checked = true;
+      const radio = form.querySelector(`input[name="trip"][value="${value}"]`);
+      if (radio.disabled) return; // not allowed for the places chosen (see applyTripRule)
+      radio.checked = true;
       updateTrip();
     }
 
@@ -804,7 +866,7 @@
 
     // Route cards fill the form
     document.querySelectorAll('.route button[data-drop]').forEach(btn => btn.addEventListener('click', () => {
-      document.getElementById('destination').value = btn.dataset.drop;
+      setPlace(document.getElementById('destination'), btn.dataset.drop);
       setTrip(btn.dataset.trip);
       document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => document.getElementById('name').focus({ preventScroll: true }), 600);
@@ -829,9 +891,12 @@
         `Trip: ${data.get('trip')}`,
         `Car: ${data.get('car')}`,
         data.get('pickup') && `Pickup: ${data.get('pickup')}`,
+        data.get('pickup_map') && `Pickup on map: ${data.get('pickup_map')}`,
         data.get('destination') && `Drop: ${data.get('destination')}`,
+        data.get('drop_map') && `Drop on map: ${data.get('drop_map')}`,
         data.get('date') && `Date: ${data.get('date')}`,
         data.get('return_date') && `Return: ${data.get('return_date')}`,
+        data.get('estimate') && `Website estimate: ${data.get('estimate')}`,
         `Name: ${data.get('name')}`,
         `Phone: ${data.get('phone')}`,
       ].filter(Boolean);
@@ -854,10 +919,9 @@
       document.getElementById('callbackMsg').textContent = "Thanks! We'll message you on WhatsApp shortly.";
     });
 
-    updateTrip();
-
-    // ─── Place suggestions for Pickup / Drop ───
-    // Popular places show instantly; anything else comes from Photon (free OpenStreetMap search, no API key).
+    // ─── Locations: suggestions, current location and map picker ───
+    // All free, no API key: Photon (OpenStreetMap search) turns text and map points into places,
+    // MapLibre + OpenFreeMap draw the map, and the browser's geolocation gives "current location".
     const POPULAR_PLACES = [
       ['Patna', 'Bihar'], ['Patna Airport (Jay Prakash Narayan)', 'Patna, Bihar'], ['Patna Junction', 'Patna, Bihar'],
       ['Patliputra Junction', 'Patna, Bihar'], ['Rajendra Nagar Terminal', 'Patna, Bihar'], ['Danapur', 'Patna, Bihar'],
@@ -869,9 +933,75 @@
       ['Deoghar', 'Jharkhand'], ['Ranchi', 'Jharkhand'], ['Dhanbad', 'Jharkhand'], ['Varanasi', 'Uttar Pradesh'],
       ['Gorakhpur', 'Uttar Pradesh'], ['Prayagraj', 'Uttar Pradesh'], ['Kolkata', 'West Bengal'], ['Siliguri', 'West Bengal'],
     ];
-    const PHOTON_URL = 'https://photon.komoot.io/api/?limit=6&lang=en&lat=25.61&lon=85.14&bbox=68.1,6.5,97.4,35.7&q=';
+    const PHOTON = 'https://photon.komoot.io';
+    const PHOTON_SEARCH = `${PHOTON}/api/?limit=6&lang=en&lat=25.61&lon=85.14&bbox=68.1,6.5,97.4,35.7&q=`;
+    const PATNA_CENTER = [25.6093, 85.1376];
+    const MAPLIBRE = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min';
+    const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+    const locMsg = document.getElementById('locMsg');
 
-    function attachPlaceSuggest(input) {
+    async function photonSearch(q, signal) {
+      const res = await fetch(PHOTON_SEARCH + encodeURIComponent(q), { signal });
+      const json = await res.json();
+      return json.features.map(f => {
+        const p = f.properties;
+        const parts = [p.city || p.county || p.district, p.state].filter((v, i, a) => v && v !== p.name && a.indexOf(v) === i);
+        const [lng, lat] = f.geometry.coordinates;
+        return { name: p.name, sub: parts.join(', '), value: parts[0] ? `${p.name}, ${parts[0]}` : p.name, lat, lng };
+      }).filter(it => it.name);
+    }
+
+    async function reverseGeocode(lat, lng) {
+      try {
+        const res = await fetch(`${PHOTON}/reverse?lat=${lat}&lon=${lng}&lang=en&limit=1`);
+        const p = (await res.json()).features[0]?.properties;
+        if (p) {
+          const street = [p.housenumber, p.street].filter(Boolean).join(' ');
+          const parts = [p.name, street, p.locality || p.district, p.city || p.county]
+            .filter((v, i, a) => v && a.indexOf(v) === i);
+          if (parts.length) return parts.join(', ');
+        }
+      } catch { }
+      return `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
+    }
+
+    // Fills a Pickup/Drop box. An exact point is also kept as a Google Maps link for the driver.
+    function setPlace(input, text, lat, lng) {
+      input.value = text;
+      setPoint(input, lat, lng);
+      scheduleEstimate();
+    }
+
+    function setPoint(input, lat, lng) {
+      const hasPoint = lat != null && lng != null;
+      document.getElementById(input.id + 'Map').value = hasPoint ? `https://maps.google.com/?q=${(+lat).toFixed(6)},${(+lng).toFixed(6)}` : '';
+      input.dataset.lat = hasPoint ? lat : '';
+      input.dataset.lng = hasPoint ? lng : '';
+    }
+
+    function locate(onFound, onFail) {
+      if (!navigator.geolocation) return onFail('Location is not available in this browser.');
+      navigator.geolocation.getCurrentPosition(
+        pos => onFound(pos.coords.latitude, pos.coords.longitude),
+        err => onFail(err.code === 1
+          ? 'Location permission was blocked. Allow it in your browser, or pick the point on the map.'
+          : 'Could not find your location. Please type it or pick it on the map.'),
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 });
+    }
+
+    function useCurrentLocation(input) {
+      locMsg.textContent = 'Finding your location…';
+      locMsg.classList.remove('error');
+      locate(async (lat, lng) => {
+        setPlace(input, await reverseGeocode(lat, lng), lat, lng);
+        locMsg.textContent = '';
+      }, msg => {
+        locMsg.textContent = msg;
+        locMsg.classList.add('error');
+      });
+    }
+
+    function attachPlaceSuggest(input, { onPick, actions = [] } = {}) {
       const list = document.createElement('ul');
       list.className = 'ac-list';
       list.setAttribute('role', 'listbox');
@@ -879,23 +1009,29 @@
       input.setAttribute('role', 'combobox');
       input.setAttribute('aria-autocomplete', 'list');
 
-      let items = [], active = -1, timer, controller;
+      let matches = [], items = [], active = -1, timer, controller;
 
       const close = () => { list.classList.remove('open'); active = -1; };
-      const choose = item => { input.value = item.value; close(); };
+      const choose = item => {
+        close();
+        if (item.run) item.run();
+        else if (onPick) onPick(item);
+        else setPlace(input, item.value, item.lat, item.lng);
+      };
 
       function render(query) {
+        items = [...actions, ...matches];
         list.replaceChildren();
         items.forEach((item, i) => {
           const li = document.createElement('li');
           li.setAttribute('role', 'option');
-          li.className = i === active ? 'active' : '';
+          li.className = (i === active ? 'active ' : '') + (item.run ? 'ac-action' : '');
           const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
           icon.setAttribute('width', '14'); icon.setAttribute('height', '14');
-          icon.innerHTML = '<use href="#i-pin" />';
+          icon.innerHTML = `<use href="#i-${item.icon || 'pin'}" />`;
           const name = document.createElement('b');
           // Bold the typed part when the name starts with it
-          if (item.name.toLowerCase().startsWith(query.toLowerCase())) {
+          if (!item.run && query && item.name.toLowerCase().startsWith(query.toLowerCase())) {
             name.append(item.name.slice(0, query.length));
             const rest = document.createElement('span');
             rest.textContent = item.name.slice(query.length);
@@ -922,38 +1058,29 @@
           .map(([name, sub]) => ({ name, sub, value: name }));
       }
 
-      async function remoteMatches(q) {
-        controller?.abort();
-        controller = new AbortController();
-        try {
-          const res = await fetch(PHOTON_URL + encodeURIComponent(q), { signal: controller.signal });
-          const json = await res.json();
-          return json.features.map(f => {
-            const p = f.properties;
-            const parts = [p.city || p.county || p.district, p.state].filter((v, i, a) => v && v !== p.name && a.indexOf(v) === i);
-            return { name: p.name, sub: parts.join(', '), value: parts[0] ? `${p.name}, ${parts[0]}` : p.name };
-          }).filter(it => it.name);
-        } catch { return null; }
-      }
+      input.addEventListener('focus', () => { active = -1; render(input.value.trim()); });
 
       input.addEventListener('input', () => {
         const q = input.value.trim();
+        if (!onPick) setPoint(input); // typed by hand, so drop any earlier map point
         clearTimeout(timer);
-        if (!q) { items = []; close(); return; }
-        items = localMatches(q);
+        matches = q ? localMatches(q) : [];
         active = -1;
         render(q);
         if (q.length < 2) return;
         timer = setTimeout(async () => {
-          const remote = await remoteMatches(q);
-          if (!remote || input.value.trim() !== q) return;
-          const seen = new Set(items.map(it => (it.name + it.sub).toLowerCase()));
-          const seenNames = new Set(items.map(it => it.name.toLowerCase()));
+          controller?.abort();
+          controller = new AbortController();
+          let remote;
+          try { remote = await photonSearch(q, controller.signal); } catch { return; }
+          if (input.value.trim() !== q) return;
+          const seen = new Set(matches.map(it => (it.name + it.sub).toLowerCase()));
+          const seenNames = new Set(matches.map(it => it.name.toLowerCase()));
           remote.forEach(it => {
             const key = (it.name + it.sub).toLowerCase();
-            if (!seen.has(key) && !seenNames.has(it.name.toLowerCase())) { seen.add(key); items.push(it); }
+            if (!seen.has(key) && !seenNames.has(it.name.toLowerCase())) { seen.add(key); matches.push(it); }
           });
-          items = items.slice(0, 8);
+          matches = matches.slice(0, 8);
           render(q);
         }, 250);
       });
@@ -974,8 +1101,313 @@
       input.addEventListener('blur', () => setTimeout(close, 120));
     }
 
-    attachPlaceSuggest(document.getElementById('pickup'));
-    attachPlaceSuggest(document.getElementById('destination'));
+    // ─── Map picker (MapLibre + OpenFreeMap load only when the map is first opened) ───
+    const mapDialog = document.getElementById('mapDialog');
+    const mapAddress = document.getElementById('mapAddress');
+    const mapConfirm = document.getElementById('mapConfirm');
+    let pickerMap, mapTarget, mapCenter, addressTimer;
+
+    function loadMapLibrary() {
+      if (window.maplibregl) return Promise.resolve();
+      return new Promise((resolve, reject) => {
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = `${MAPLIBRE}.css`;
+        document.head.appendChild(css);
+        const js = document.createElement('script');
+        js.src = `${MAPLIBRE}.js`;
+        js.onload = resolve;
+        js.onerror = reject;
+        document.head.appendChild(js);
+      });
+    }
+
+    function onMapMoved() {
+      const c = mapCenter = pickerMap.getCenter();
+      clearTimeout(addressTimer);
+      addressTimer = setTimeout(async () => {
+        const text = await reverseGeocode(c.lat, c.lng);
+        if (mapCenter !== c) return; // map moved again meanwhile
+        mapAddress.textContent = text;
+        mapConfirm.disabled = false;
+      }, 400);
+    }
+
+    // Glide for nearby moves; jump straight there for far ones (a long fly-over makes people wait)
+    function flyTo(lat, lng, zoom) {
+      if (!pickerMap) return;
+      const from = pickerMap.getCenter();
+      const far = Math.abs(from.lat - lat) + Math.abs(from.lng - lng) > 0.3;
+      pickerMap[far ? 'jumpTo' : 'flyTo']({ center: [lng, lat], zoom });
+    }
+
+    async function openMapPicker(input) {
+      mapTarget = input;
+      document.getElementById('mapTitle').textContent = input.id === 'pickup' ? 'Choose pickup location' : 'Choose drop location';
+      document.getElementById('mapSearch').value = '';
+      mapConfirm.disabled = true;
+      mapAddress.textContent = 'Loading map…';
+      mapDialog.showModal();
+      try { await loadMapLibrary(); } catch {
+        mapAddress.textContent = 'The map could not load. Please check your internet and try again.';
+        return;
+      }
+      const [lat, lng] = input.dataset.lat ? [+input.dataset.lat, +input.dataset.lng] : PATNA_CENTER;
+      if (!pickerMap) {
+        pickerMap = new maplibregl.Map({
+          container: 'mapCanvas',
+          style: MAP_STYLE,
+          center: [lng, lat],
+          zoom: 15.5,
+          attributionControl: { compact: true },
+        });
+        pickerMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+        pickerMap.on('movestart', () => { mapConfirm.disabled = true; mapAddress.textContent = 'Finding address…'; });
+        pickerMap.on('moveend', onMapMoved);
+      } else {
+        pickerMap.resize();
+        pickerMap.jumpTo({ center: [lng, lat], zoom: 15.5 });
+      }
+      onMapMoved();
+    }
+
+    document.querySelectorAll('[data-map-for]').forEach(btn =>
+      btn.addEventListener('click', () => openMapPicker(document.getElementById(btn.dataset.mapFor))));
+    document.getElementById('mapClose').addEventListener('click', () => mapDialog.close());
+    // Close only on clicks on the dark backdrop. Checking the box (not e.target) matters: picking a
+    // suggestion hides the list mid-click, and that click then reports the dialog itself as its target.
+    mapDialog.addEventListener('click', e => {
+      const r = mapDialog.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) mapDialog.close();
+    });
+    mapConfirm.addEventListener('click', () => {
+      setPlace(mapTarget, mapAddress.textContent, mapCenter.lat, mapCenter.lng);
+      mapDialog.close();
+    });
+    document.getElementById('mapLocate').addEventListener('click', () => {
+      mapAddress.textContent = 'Finding your location…';
+      locate((lat, lng) => flyTo(lat, lng, 17), msg => { mapAddress.textContent = msg; });
+    });
+
+    // Search box inside the map: jump to the chosen place
+    attachPlaceSuggest(document.getElementById('mapSearch'), {
+      onPick: async item => {
+        let { lat, lng } = item;
+        if (lat == null) { // popular places have no coordinates, so look them up
+          try { [{ lat, lng }] = await photonSearch(item.value); } catch { return; }
+        }
+        flyTo(lat, lng, 16);
+      },
+    });
+
+    // Pickup / Drop boxes: suggestions plus "current location" and "choose on map" shortcuts
+    ['pickup', 'destination'].forEach(id => {
+      const input = document.getElementById(id);
+      attachPlaceSuggest(input, {
+        actions: [
+          { name: 'Use my current location', sub: 'Exact point from your phone GPS', icon: 'gps', run: () => useCurrentLocation(input) },
+          { name: 'Choose on map', sub: 'Move the pin to the exact spot', icon: 'map', run: () => openMapPicker(input) },
+        ],
+      });
+    });
+    document.getElementById('useMyLocation').addEventListener('click', () => useCurrentLocation(document.getElementById('pickup')));
+
+    // ─── Fare estimate ───
+    // Road distance comes from free OSRM routing servers (OpenStreetMap data, no API key).
+    // Per-car rates are read from the <option data-*> attributes above; these are the trip rules.
+    const FARE_RULES = {
+      // 8 hrs / 80 km package, flat price per car, only for trips inside Patna
+      // (Danapur & Khagaul to Patna City, incl. airport, Phulwari, Digha). Anything outside is outstation.
+      local: { area: { south: 25.53, north: 25.68, west: 84.98, east: 85.29 } },
+      round: { minKm: 200, driverCharge: 200 },
+      oneway: {},
+    };
+    const ROUTERS = [
+      'https://routing.openstreetmap.de/routed-car/route/v1/driving',
+      'https://router.project-osrm.org/route/v1/driving',
+    ];
+    const estimateBox = document.getElementById('estimate');
+    const estTotal = document.getElementById('estTotal');
+    const estRoute = document.getElementById('estRoute');
+    const estLines = document.getElementById('estLines');
+    const estCars = document.getElementById('estCars');
+    const estNote = document.getElementById('estNote');
+    const estimateField = document.getElementById('estimateField');
+    const pickupInput = document.getElementById('pickup');
+    const dropInput = document.getElementById('destination');
+    const geoCache = new Map(), routeCache = new Map();
+    let route = null, estimateToken = 0, estimateTimer;
+    const localRadio = form.querySelector('input[name="trip"][value="Local"]');
+    const outstationRadios = [...form.querySelectorAll('input[name="trip"]:not([value="Local"])')];
+    let lastOutstation = 'Round Trip';
+
+    function inPatna({ lat, lng }) {
+      const a = FARE_RULES.local.area;
+      return lat >= a.south && lat <= a.north && lng >= a.west && lng <= a.east;
+    }
+
+    // Local rates are for trips within Patna; per-km outstation rates are for trips leaving it.
+    // Once both places are known, only the matching trip types can be picked.
+    function applyTripRule() {
+      const known = !!route && route !== 'loading';
+      const inside = known && route.inPatna;
+      const outside = known && !route.inPatna;
+      localRadio.disabled = outside;
+      localRadio.parentElement.title = outside ? 'Local packages are only for trips within Patna' : '';
+      outstationRadios.forEach(r => {
+        r.disabled = inside;
+        r.parentElement.title = inside ? 'Both places are in Patna, so the local package applies' : '';
+      });
+      if (outside && tripValue() === 'Local') setTrip(lastOutstation);
+      if (inside && tripValue() !== 'Local') { lastOutstation = tripValue(); setTrip('Local'); }
+    }
+
+    const rupees = n => '₹' + Math.round(n).toLocaleString('en-IN');
+
+    // A box's exact point if it has one, otherwise look its text up (cached per text)
+    function pointFor(input) {
+      if (input.dataset.lat) return Promise.resolve({ lat: +input.dataset.lat, lng: +input.dataset.lng });
+      const text = input.value.trim();
+      if (!text) return Promise.resolve(null);
+      if (!geoCache.has(text)) {
+        geoCache.set(text, photonSearch(text)
+          .then(([first]) => first ? { lat: first.lat, lng: first.lng } : null)
+          .catch(() => { geoCache.delete(text); return null; }));
+      }
+      return geoCache.get(text);
+    }
+
+    function straightLineKm(a, b) {
+      const rad = d => d * Math.PI / 180;
+      const h = Math.sin(rad(b.lat - a.lat) / 2) ** 2 +
+        Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(rad(b.lng - a.lng) / 2) ** 2;
+      return 12742 * Math.asin(Math.sqrt(h));
+    }
+
+    async function roadRoute(a, b) {
+      const key = [a.lat, a.lng, b.lat, b.lng].map(n => n.toFixed(4)).join(',');
+      if (routeCache.has(key)) return routeCache.get(key);
+      for (const base of ROUTERS) {
+        try {
+          const res = await fetch(`${base}/${a.lng},${a.lat};${b.lng},${b.lat}?overview=false`);
+          const json = await res.json();
+          if (json.code === 'Ok') {
+            const r = { km: json.routes[0].distance / 1000, hours: json.routes[0].duration / 3600, byRoad: true };
+            routeCache.set(key, r);
+            return r;
+          }
+        } catch { }
+      }
+      // Routing unavailable: straight line plus 30% is a fair guess for road distance
+      return { km: straightLineKm(a, b) * 1.3, byRoad: false };
+    }
+
+    function scheduleEstimate() {
+      clearTimeout(estimateTimer);
+      estimateTimer = setTimeout(updateEstimate, 300);
+    }
+
+    async function updateEstimate() {
+      const token = ++estimateToken;
+      if (!pickupInput.value.trim() || !dropInput.value.trim()) { route = null; applyTripRule(); renderEstimate(); return; }
+      route = 'loading';
+      renderEstimate();
+      const [a, b] = await Promise.all([pointFor(pickupInput), pointFor(dropInput)]);
+      const result = a && b ? await roadRoute(a, b) : null;
+      if (token !== estimateToken) return; // a newer change is already being worked out
+      route = result && {
+        ...result,
+        inPatna: inPatna(a) && inPatna(b),
+        outsidePlace: (inPatna(b) ? pickupInput : dropInput).value.split(',')[0],
+      };
+      applyTripRule();
+      renderEstimate();
+    }
+
+    // Fare for one car on the current trip type, with the working shown line by line
+    function fareFor(option, trip, km) {
+      const rate = Number(option.dataset[trip]);
+      if (!rate) return null;
+      if (trip === 'local') {
+        return { total: rate, lines: [['8 hrs / 80 km package', rupees(rate)]] };
+      }
+      if (trip === 'oneway') {
+        const kmR = Math.max(1, Math.round(km));
+        return { total: kmR * rate, lines: [[`${kmR} km × ₹${rate}/km`, rupees(kmR * rate)]] };
+      }
+      const { minKm, driverCharge } = FARE_RULES.round;
+      const both = Math.max(1, Math.round(km * 2));
+      const billed = Math.max(both, minKm);
+      const lines = [
+        [`There and back: ${both} km` + (billed > both ? ` (min ${minKm} km)` : ''), ''],
+        [`${billed} km × ₹${rate}/km`, rupees(billed * rate)],
+        ['Driver charge', rupees(driverCharge)],
+      ];
+      return { total: billed * rate + driverCharge, lines };
+    }
+
+    function renderEstimate() {
+      const trip = TRIP_KEY[tripValue()];
+      const ready = route && route !== 'loading';
+      estimateBox.hidden = !route;
+      fareHint.hidden = !!route;
+      estimateField.value = '';
+      if (!route) return;
+
+      const from = pickupInput.value.split(',')[0];
+      const to = dropInput.value.split(',')[0];
+      if (route === 'loading') {
+        estTotal.textContent = '…';
+        estRoute.textContent = `${from} → ${to} · calculating distance…`;
+        estLines.replaceChildren(); estCars.replaceChildren(); estNote.textContent = '';
+        return;
+      }
+      if (!ready) return;
+
+      const km = route.km;
+      const time = route.hours ? ` · about ${route.hours < 1 ? Math.max(5, Math.round(route.hours * 60 / 5) * 5) + ' min' : route.hours.toFixed(1).replace('.0', '') + ' hrs'}` : '';
+      estRoute.textContent = `${from} → ${to} · ${Math.round(km)} km ${route.byRoad ? 'by road' : '(approx.)'}${time}`;
+
+      // Every car available for this trip, so people can compare
+      const options = [...carSelect.options].filter(o => !o.disabled && o.value !== 'Not sure');
+      const selected = carSelect.selectedOptions[0];
+      estCars.replaceChildren(...options.map(o => {
+        const f = fareFor(o, trip, km);
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = o === selected ? 'active' : '';
+        b.innerHTML = `<span></span><b></b>`;
+        b.firstChild.textContent = o.value;
+        b.lastChild.textContent = rupees(f.total);
+        b.addEventListener('click', () => { carSelect.value = o.value; updateHint(); });
+        return b;
+      }));
+
+      const fare = selected.value === 'Not sure' ? null : fareFor(selected, trip, km);
+      estTotal.textContent = fare ? rupees(fare.total) : 'Pick a car';
+      estLines.replaceChildren(...(fare ? fare.lines : []).map(([label, value]) => {
+        const li = document.createElement('li');
+        li.innerHTML = '<span></span><b></b>';
+        li.firstChild.textContent = label;
+        li.lastChild.textContent = value;
+        return li;
+      }));
+
+      const notes = ['Toll, parking and driver food extra.'];
+      notes.unshift(route.inPatna
+        ? 'Both places are in Patna, so the local package applies.'
+        : `${route.outsidePlace} is outside Patna, so outstation per-km rates apply (local packages are for Patna only).`);
+      if (!route.byRoad) notes.push('Road distance is approximate.');
+      notes.push('We confirm the final fare on WhatsApp.');
+      estNote.textContent = notes.join(' ');
+
+      if (fare) estimateField.value = `${rupees(fare.total)} for ${selected.value}, ${tripValue()}, ${Math.round(km)} km one way (+ toll, parking, driver food)`;
+    }
+
+    [pickupInput, dropInput].forEach(input => input.addEventListener('change', scheduleEstimate));
+
+    updateTrip();
+    scheduleEstimate();
   </script>
 </body>
 
