@@ -426,7 +426,15 @@ svg { flex-shrink: 0; }
 .map-foot { display: flex; align-items: center; gap: 14px; padding: 14px 16px 16px; }
 .map-address { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .map-address small { color: var(--amber); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.map-address span { font-size: 14px; color: #D9DEEA; }
+/* Always two lines tall, so a longer or shorter address never resizes the map */
+.map-address span {
+  font-size: 14px; line-height: 1.4; color: #D9DEEA;
+  height: 2.8em;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+  overflow: hidden;
+  transition: opacity .2s ease;
+}
+.map-address span.is-stale { opacity: .45; }
 .map-foot .btn:disabled { opacity: .5; cursor: wait; transform: none; }
 
 /* ─── SECTIONS ─── */

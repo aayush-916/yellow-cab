@@ -1105,7 +1105,7 @@
     const mapDialog = document.getElementById('mapDialog');
     const mapAddress = document.getElementById('mapAddress');
     const mapConfirm = document.getElementById('mapConfirm');
-    let pickerMap, mapTarget, mapCenter, addressTimer;
+    let pickerMap, mapTarget, mapCenter, addressTimer, resolvedSpot;
 
     function loadMapLibrary() {
       if (window.maplibregl) return Promise.resolve();
@@ -1122,14 +1122,25 @@
       });
     }
 
+    function addressReady() {
+      mapAddress.classList.remove('is-stale');
+      mapConfirm.disabled = false;
+    }
+
     function onMapMoved() {
-      const c = mapCenter = pickerMap.getCenter();
+      const c = pickerMap.getCenter();
+      const spot = c.lat.toFixed(6) + ',' + c.lng.toFixed(6);
+      // MapLibre also reports resizes (e.g. the phone's address bar showing/hiding) as moves;
+      // if the pin is still on the same spot there is nothing to look up.
+      if (spot === resolvedSpot) { clearTimeout(addressTimer); addressReady(); return; }
+      mapCenter = c;
       clearTimeout(addressTimer);
       addressTimer = setTimeout(async () => {
         const text = await reverseGeocode(c.lat, c.lng);
         if (mapCenter !== c) return; // map moved again meanwhile
         mapAddress.textContent = text;
-        mapConfirm.disabled = false;
+        resolvedSpot = spot;
+        addressReady();
       }, 400);
     }
 
@@ -1147,6 +1158,7 @@
       document.getElementById('mapSearch').value = '';
       mapConfirm.disabled = true;
       mapAddress.textContent = 'Loading map…';
+      resolvedSpot = null;
       mapDialog.showModal();
       try { await loadMapLibrary(); } catch {
         mapAddress.textContent = 'The map could not load. Please check your internet and try again.';
@@ -1162,7 +1174,7 @@
           attributionControl: { compact: true },
         });
         pickerMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
-        pickerMap.on('movestart', () => { mapConfirm.disabled = true; mapAddress.textContent = 'Finding address…'; });
+        pickerMap.on('movestart', () => { mapConfirm.disabled = true; mapAddress.classList.add('is-stale'); });
         pickerMap.on('moveend', onMapMoved);
       } else {
         pickerMap.resize();
